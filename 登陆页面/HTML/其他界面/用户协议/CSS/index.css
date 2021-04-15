@@ -1,0 +1,79 @@
+body{
+    background-image: url(../image/blue3.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+#block{
+    position: absolute;
+    height: 1200px;
+    width: 1890px;
+    background-color: black;
+    opacity: 0.4;
+} 
+/* 蓝色背景 */
+.main-box{
+    position:absolute;
+    width: 1310px;
+    height: 640px;
+    top:60px;
+    left:110px;
+    background-color: #D5E0F6;
+    display:inline;
+    clear: both;
+    text-align: center;
+    border-radius: 25px 25px 25px 25px;
+}
+/* 标题 */
+.title{
+    position: relative;
+    top:-390px;
+    left:350px;
+    color:#2F4DBF;
+    font-size: 50px;
+}
+#mainimg
+{
+ position: relative;
+ top:-400px;
+ left:820px;
+ transform: scale(0.8);
+ }
+
+/* 按钮 */
+.main-button{
+    position: relative;
+    top:-390px;
+    left:370px;
+    width: 240px;
+    height:50px;
+    border-radius:50px 50px 50px 50px ;
+    border:none;
+    font-size: 30px;
+    color:#2F4DBF;
+    background: linear-gradient(45deg,#8EB1ED,#8A83F7);
+    outline: none;
+    transition: 1s;
+}
+.main-button:hover{
+    transform: scale(0.9);
+}
+#word{
+    position: relative;
+    top:50px;
+    left:400px;
+    font-size: 20px;
+    color: #707070;
+    text-align: left;
+    
+}
+#mainword{
+    position:relative;
+    top:30px;
+    left:-300px;
+    width: 620px;
+    line-height: 40px;
+    
+    
+}
+ 
+ 

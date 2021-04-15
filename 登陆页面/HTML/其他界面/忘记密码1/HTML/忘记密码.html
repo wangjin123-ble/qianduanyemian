@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="shortcut icon" href="../ /../../../../favicon.ico" />
+    <style type="text/css"></style>
+    <title>忘记密码</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../JS/index.js"></script>
+    <div id="block"></div>
+    <div  style="transform: scale(0.9); ">
+        <div class="main-img">
+            <div id="white-slip"></div>
+            <div id="white-slip-1"></div>
+            <img id="cloud" src="../image/cloud.png" alt="">
+            <img id="cloud-1" src="../image/cloud.png" alt="">
+            <img id="cloud-2" src="../image/cloud.png" alt="">
+        </div> 
+        <div id="main-box">
+            <b class="title">云淄</b>
+            <form id="big-box" @submit.prevent="submitFrom()">
+                <div id="from-number" >
+                    <div id="left-img"> <img id="myimg" src="../image/招聘.png" alt=""></div>
+                    <input id="first-form" name="email" type="text" v-model="mail" value=" 请输入预留邮箱" autocomplete="off" onclick="back1()" onblur="reback()">
+                </div>
+                <div id="from-number" >
+                    <div id="left-img"> <img id="myimg" src="../image/密码-1.png" alt=""></div>
+                    <input id="first-form-1" name="email" type="text" v-model="new_password" value=" 请输入预留邮箱" autocomplete="off" onclick="back2()" onblur="reback1()" >
+                </div>
+                <div id="from-number" >
+                    <div id="left-img"> <img id="myimg" src="../image/密码-1.png" alt=""></div>
+                    <input id="first-form-2" name="email" type="text" v-model="new_password_again" value=" 请输入预留邮箱" autocomplete="off" onclick="back3()" onblur="reback2()">
+                </div>
+                <button type="submit"  id="main-button" onclick="mainbord()" >  continue</button>  
+                    <img id="min-home" style="position: relative;top: 90px;left: 160px; transform: scale(0.16);opacity: 0.8;" src="../image/首页.png" alt="">
+                    <a href="../../../yunzi.html" id="return" ><span style="position: relative; top:-18px;left: 110px;">点击返回登陆页面</span></a>
+            </form>
+            <script>
+                var app = new Vue({
+                  el: "#big-box",
+                    data:{   
+                        mail:" 请输入预留邮箱",
+                        new_password:" 请输入新的密码",
+                        new_password_again:" 请再次输入密码",
+                        token:''
+                        },
+                  methods:
+                  {
+                       submitFrom()
+                      {    
+                        var that=this;
+                        var params = new URLSearchParams();
+                        params.append('key', 'value');
+                         axios.post("http://javahome1.natapp1.cc/Empproject/fps",
+                         {mail:this.mail+'',new_password:this.new_password+'',new_password_again:this.new_password_again+'',token:this.token+''},
+                         {headers: {'Content-Type':'application/x-www-form-urlencoded'}}).then
+                        (function(response) {
+                          console.log(response.data);
+                          if(response.data==true)
+                          {
+                            // for(var i=1;i<4;i++){
+                            //     var box=document.getElementById("first-form");
+                            //         box.parentNode.removeChild(box);
+                            //                     }
+                            //     for(var i=1;i<4;i++){
+                            //         var box=document.getElementById("left-img");
+                            //             box.parentNode.removeChild(box);
+                            //             }
+                            //         for(var i=1;i<4;i++){
+                            //              var box=document.getElementById("from-number");
+                            //             box.parentNode.removeChild(box);
+                            //                         }
+                                        document.getElementById("big-box").style.display="none";
+                                        document.getElementById("main-button").style.display="none";
+                                        document.getElementById("min-home").style.display="none";
+                                        document.getElementById("return").style.display="none";
+                                     var img=document.getElementById("succee");
+                                    img.style.display="block";
+                                    document.getElementById("main-button").innerHTML = "continue";
+                                    document.getElementById("succee-word").style.display="block";
+                                    document.getElementById("main-button-1").style.display="block";
+                          }
+                          else{
+                            for(var i=1;i<2;i++){
+        var box=document.getElementById("first-form");
+        box.parentNode.removeChild(box);
+        }
+        for(var i=1;i<2;i++){
+        var box=document.getElementById("first-form-1");
+        box.parentNode.removeChild(box);
+        }
+        for(var i=1;i<2;i++){
+        var box=document.getElementById("first-form-2");
+        box.parentNode.removeChild(box);
+        }
+        for(var i=1;i<4;i++){
+            var box=document.getElementById("left-img");
+            box.parentNode.removeChild(box);
+            }
+            for(var i=1;i<4;i++){
+                var box=document.getElementById("from-number");
+                box.parentNode.removeChild(box);
+                }
+                document.getElementById("main-button").style.display="none";
+                 document.getElementById("min-home").style.display="none";
+                document.getElementById("main-button").style.display="none";
+                var img=document.getElementById("error");
+                img.style.display="block";
+                document.getElementById("main-button").innerHTML = "continue";
+                document.getElementById("succee-word-1").style.display="block";
+                document.getElementById("min-button-1").style.display="block";
+                document.getElementById("min-button-2").style.display="block";
+                document.getElementById("return").style.display="none";
+                              console.log("non")
+
+                          }
+                        },function(err){})
+                      }
+                  }
+              })
+            </script>
+            <a href="../../../yunzi.html">   <button type="submit"  id="main-button-1" >  continue</button></a>
+            <a href="../HTML/忘记密码.html"><button type="submit"  id="min-button-1" >再试一次</button></a>
+            <button type="submit"  id="min-button-2" >联系管理员</button>
+            <div id="box-succee">
+                <div><img id="succee" src="../image/邮箱验证成功.png" alt=""></div>
+                <div><img id="error" src="../image/失败.png" alt=""></div>
+                <div id="succee-word">验证成功</div>
+                <div id="succee-word-1">验证失败</div>
+            </div>
+     
+
+        </div>
+        
+
+    
+    
+    
+    </div> 
+</body>
+</html>

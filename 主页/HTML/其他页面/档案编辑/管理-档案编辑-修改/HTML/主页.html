@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/icon图标0/iconfont.css">
+    <style type="text/css"></style>
+    <title>档案修改</title>
+</head>
+<body style="overflow: hidden;">
+    <script src="../JS/index.js"></script>
+    <!-- 左侧导航栏 -->
+    <div id="tocenter"> 
+      <div id="blue-line">
+        <div id="title">
+           <div id="main-logo" > <img src="../image/logo.png" alt=""></div>
+            <span id="main-word">云淄</span>
+        </div>
+    <a href="../../../../主页.html">  <ul id="min-box">
+      <span id="left-img">&#xe691;</span>
+        <span id="min-word">主页</span>
+    </ul></a>
+      <ul id="min-box-1" onclick="beopen4()">
+        <span id="left-img">&#xe641;</span>
+          <span id="min-word">管理</span>
+          <span id="be-more-4">&#xe637;</span>
+      </ul>
+          <ul id="two-box-4">
+            <a href="./../../管理-档案编辑-主页/HTML/主页.html"><li id="two-word">档案编辑</li></a>
+           <a href="../../../管理审批/管理-审批-主页/HTML/主页.html"> <li id="two-word">管理审批</li></a>
+            <a href="../../../黑名单/管理-黑名单-主页/HTML/主页.html"><li id="two-word">黑名单</li></a>
+      </ul>
+      <ul id="min-box-2" onclick="beopen1()">
+        <span id="left-img">&#xe7a4;</span>
+          <span id="min-word">物品档案</span>
+          <span id="be-more-0">&#xe637;</span>
+      </ul>
+            <ul id="two-box-0">
+              <a href="../../../物品档案/物品档案/物品档案.html"><li id="two-word">目录</li></a>
+           <a href="../../../物品档案/书籍简介/书籍简介.html"> <li id="two-word">查询</li></a>
+   </ul>
+      <ul id="min-box-3" onclick="beopen()" onfocus="tolook()">
+        <span id="left-img">&#xe6f9;</span>
+          <span id="min-word">物品交流</span>
+          <span id="be-more-1">&#xe637;</span>
+      </ul>
+            <ul id="two-box-1">
+                 <a href="../../../物品交流/物品交流-预约/HTML/预约.html"><li id="two-word">预约</li></a>
+                 <a href="../../../物品交流/物品交流-借阅/HTML/借阅.html"><li id="two-word">借用</li></a>
+                <a href="../../../物品交流/物品交流-归还/HTML/归还.html"> <li id="two-word">归还</li></a>
+            </ul>
+             <!-- 修改部分(将id:be-more改成了be-more-3;min-box的盒子后加了onclick="beopen3()"，也可以直接把这部分粘贴过去替代原有内容) -->
+        <ul id="min-box-4" onclick="beopen3()">
+          <span id="left-img">&#xe613;</span>
+                 <span id="min-word">统计分析</span>
+                 <span id="be-more-3">&#xe637;</span>
+         </ul>
+            <!-- 修改部分 -->
+         <!-- 添加部分 -->
+             <ul id="two-box-3">
+             <a href="../../../统计分析/统计分析1/HTML/统计分析1.html"><li id="two-word">统计分析</li></a>
+             <a href="../../../统计分析/统计报表/统计报表.html"><li id="two-word">统计报表</li></a>
+             </ul>
+          <!-- 添加部分 -->
+         <ul id="min-box-5" onclick="beopen0()">
+          <span id="left-img">&#xe690;</span>
+                 <span id="min-word">资产维修</span>
+                 <span id="be-more-2">&#xe637;</span>
+         </ul> 
+             <ul id="two-box-2">
+                 <a href="../../../资产维修/维修申请/维修申请.html"><li id="two-word">维修申请</li></a>
+                 <a href="../../../资产维修/报修处理/报修处理.html"><li id="two-word">报修处理</li></a>
+             </ul>
+                <a href="../../../帮助/帮助.html">    <ul id="min-box-6">
+                  <span id="left-img">&#xea02;</span>
+                          <span id="min-word">帮助</span>
+                 </ul></a>
+         <a href="javascript:history.back(-1)"><img id="toback" src="../image/Log out.png" alt=""> </a>  
+    </div>
+
+            <!-- 上方导航栏 -->
+            <div id="white-line">
+                   <!-- 左侧各项 -->
+              <span id="menu">&#xe505;</span>
+              <div id="record"><span style="position: relative; top:35%">修改</span></div>
+               <!--搜索框 -->
+               <!-- <div id="search">
+                 <span>搜索 &nbsp;</span>
+                 <input id="search-box" type="text" value="例如：书名" onclick="back()" onblur="back0()"> 
+                  <button id="button-box" > <span id="search-button">&#xe825;</span></button>
+               </div> -->
+               <!-- 右边各项 -->
+                <div id="head-img"> <span style="position: relative; top:4px;">头像</span></div>
+                <a style="text-decoration: none;" href="./其他页面/通知/HTML/通知.html"><span id="alarm">&#xe605;</span></a>
+                <span id="set" onclick="beopen2()">&#xe51b;</span>
+                  <div id="set-up">
+                    <a href="../HTML/其他页面/重置密码/HTML/重置密码.html" style="text-decoration: none;"><ul id="min-cell" style="font-size:14px;border-radius:8px 8px 0 0;">重置密码</ul></a>
+                    <a href="../HTML/其他页面/注销/HTML/注销.html" style="text-decoration: none;"><ul id="min-cell" >注销</ul></a>
+                    <ul id="min-cell" style=" border-radius: 0 0 8px 8px;">更多</ul>
+                  </div>
+               
+
+            </div>
+            <div>
+              <img src="../image/编 辑 copy (1).png" alt="" id="TianjiaImg">
+              <span id="BookJianjie">书籍简介</span>
+              <div id="DanganZiliao"><span>{{档案资料}}</span></div>
+              <input type="submit" value="complete" id="complete">
+              <span id="ZichanLeibie">资产类别</span>
+              <select name="sel" id="XiaLaKuang">
+                <option value="1">图书</option>
+                <option value="2">电脑</option>
+                <option value="3">桌椅</option>
+                <option value="4">其他</option>
+                <!-- 使用select add()方法添加新的表单元素，但是value值怎么变成5自动 -->
+            </select>
+            <!-- 可能要使用到form表单 -->
+            <span id="BianhaoTxt">编号</span>
+            <input type="text" id="BianhaoNumber">
+            <span id="MingchengTxt">名称</span>
+            <input type="text" name="" id="MingchengContent">
+            <span id="ZuozheTxt">作者</span>
+            <input type="text" name="" id="ZuozheContent">
+            <span id="LeibieTxt">书籍类别</span>
+            <input type="text" name="" id="LeibieContent">
+            <span id="ChubanTxt">出版日期</span>
+            <input type="text" name="" id="ChubanContent">
+            <span id="JiageTxt">价格</span>
+            <input type="text" name="" id="JiageContent">
+            <span id="GouruTxt">购入日期</span>
+            <input type="text" name="" id="GouruContent">
+            <span id="ShuliangTxt">购入数量</span>
+            <input type="text" name="" id="ShuliangContent">
+            <span id="DidianTxt">存放地点</span>
+            <input type="text" name="" id="DidianContent">
+            <span id="FuzerenTxt">负责人</span>
+            <input type="text" name="" id="FuzerenContent">
+            <span id="BumenTxt">所属部门</span>
+            <input type="text" name="" id="BumenContent">
+            </div>
+
+    </div> 
+</body>
+</html>

@@ -1,0 +1,439 @@
+ /*居中盒子  */
+ #tocenter{
+     margin:0 auto;
+ } 
+ /*左侧底部蓝色背景 */
+ #blue-line{
+     position: relative;
+     left:0%;
+     width: 260px;
+     height: 755px;
+     background-color: #29304B;
+     z-index: 0;
+     }
+/* 上端LOGO及名称 */
+        /* 主体盒子 (背景)   最上端导航栏的参数是这个盒子的高，60px*/
+   #title{
+       position: relative;
+       top:0px;
+       left:0px;
+       height: 60px;
+       width: 260px;
+       background-color:#171C30 ;
+   }
+        /* 左上角LOGO*/
+   #main-logo{
+       position:absolute;
+       top:-108px;
+       left:-100px;
+       transform: scale(0.18);
+   }
+         /* 名称 */
+   #main-word{
+       position: absolute;
+       top:12px;
+       left:70px;
+       color:aliceblue;
+       font-size: 25px;
+   }
+/* 一级菜单 */
+/* 逐列动画 */
+@keyframes open{
+    to{width:260px;opacity: 1;}
+}
+#min-box,#min-box-1,#min-box-2,#min-box-3,#min-box-4,#min-box-5,#min-box-6{
+    position: relative;
+    width: 0px;
+    height: 50px;
+    background-color:#29304B;
+    text-align: center;
+    opacity: 0;
+    animation:open  0.5s linear;
+    animation-fill-mode: forwards;
+}
+#min-box-1{animation-delay: 0.1s;}
+#min-box-2{animation-delay: 0.2s;}
+#min-box-3{animation-delay: 0.3s;}
+#min-box-4{animation-delay: 0.4s;}
+#min-box-5{animation-delay: 0.5s;}
+#min-box-6{animation-delay: 0.6s;}
+#min-box:hover,#min-box-1:hover,#min-box-2:hover,#min-box-3:hover,#min-box-4:hover,#min-box-5:hover,#min-box-6:hover{
+    background-color: #2F4DBF;
+}
+/* 添加部分 */
+#two-box-3,#two-box-4{
+    position: relative;
+    width: 230px;
+    height:45px;
+    left:30px;
+    display:none; 
+    z-index: 200px;
+}
+#two-box-4{
+    height:70px;
+}
+#be-more-3,#be-more-4{
+    position: absolute;
+    top:18px;
+    left:210px;
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: 1s;
+    z-index: 100;
+}
+#be-more-3:hover,#be-more-4:hover{
+    transform: rotate(90deg);
+}
+    /* 标题文字 */
+    #min-word{
+        position: absolute;
+        top:32%;
+        left: 28%;
+        color: #ffffff;
+        font-size: 15px;
+
+    }
+    /* 左侧图片 */
+    #left-img{
+        position: absolute;
+        top:32%;
+        left:-35%;
+        position: relative;
+        font-family: "iconfont" !important;
+        font-size: 25px;
+        font-style: normal;
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    /* 可展开标志 */
+    #be-more,#be-more-0,#be-more-1,#be-more-2{
+        position: absolute;
+        top:18px;
+        left:210px;
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: 1s;
+        z-index: 100;
+    }
+    #be-more:hover{
+        left:220px;
+    }
+    #be-more-0:hover,#be-more-1:hover,#be-more-2:hover{
+        transform: rotate(90deg);
+    }
+/* 二级菜单 */
+        /* 二级菜单的盒子 ，用于调整二级菜单位置*/
+#two-box-0,#two-box-1,#two-box-2{
+    position: relative;
+    width: 230px;
+    height:75px;
+    left:30px;
+    display:none; 
+}
+#two-box-2{
+    height:52px;
+}
+#two-box-0{
+    height: 52px;
+}
+        /* 二级菜单中每一项的盒子，用于调整字体和间距参数 */
+#two-word{
+    font-size: 15px;
+    color:#999999;
+    margin-bottom: 5px;
+    margin-top: 3px;
+}
+#two-word:hover{
+    color: #ffffff;
+}
+/* 底层返回按钮 */
+#toback{
+    position: relative;
+    left:5%;
+    top:60px;
+    transform: scale(0.9);
+    transition: 1.2s;
+}
+#toback:hover{
+    transform: scale(0.8);
+}
+/* 上方导航栏 */
+#white-line{
+    position:absolute;
+    top:0px;
+    height: 60px;
+    width: 1275px;
+    left:260px;
+    background-color: #ffffff;
+
+}
+
+        /* 搜索框 */
+#search{
+    position: relative;
+    top:10px;
+    left:610px;
+    width: 350px;
+    height:25px;
+    border-radius: 7px 7px 7px 7px;
+    border :2px solid #C7D8DE;
+    padding: 5px;
+    font-size: 15px;
+    z-index: 1000;
+}
+#search-box{
+    position: relative;
+    top:-1px;
+    width: 220px;
+    height: 28px;
+    color:#999999;
+    border: none;
+    outline: none;
+}
+    /* 搜索按钮 */
+    #search-button{
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        color: #89979C;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    #button-box{
+        position: relative;
+        left:50px;
+        background-color:transparent;
+        border: none;
+        outline: none;
+        transition: 0.8s;
+    }
+    #button-box:hover{
+       transform: scale(0.8);
+    }
+    
+/* 中间色块 */
+#blue{
+    height: 50px;
+    background-color: #2F4DBF;
+    width: 1070px;
+    margin: 50px 50px;
+    color: #fff;
+    font-size: 30px;
+    padding: 30px 50px;
+}
+
+/* 下方主要板块 */
+
+/* 添加部分 */
+#two-box-3{
+    position: relative;
+    width: 230px;
+    height:45px;
+    left:30px;
+    display:none; 
+}
+#be-more-3{
+    position: absolute;
+    top:18px;
+    left:210px;
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: 1s;
+    z-index: 100;
+}
+ 
+
+/* 白色主板 */
+#white-box{
+    position: relative;
+    font-size: 22px;
+    top:-20px;
+    left:50px;
+    height: 520px;
+    width:1150px;
+    background-color:#ffffff;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+/* 提交按钮 */
+#beout{
+    position:absolute;
+    top:430px;
+    left:560px;
+    width: 120px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #2F4DBF;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+    outline: none;
+   transition: 0.8s;
+    font-size: 25px;
+}
+#beout:hover{
+    background-color: #44BE90;
+}
+/* 输入框 */
+    /* 外部盒子 */
+#main-input,#main-input-1{
+
+    position: relative;
+    top:15px;
+    left: 300px;
+    width: 600px;
+    height:60px;
+    border-bottom: 2px solid #EEEEEE;
+    margin-top: 20px;
+}
+#main-input-1{
+    height:130px;
+}
+
+#edit,#edit-0,#edit-1{
+    width: 260px;
+    height: 40px;
+    border:2px solid #EEEEEE;
+    font-size: 20px;
+    outline: none;
+    margin-left: 50px;
+}
+#edit-1{
+    width: 420px;
+    height:120px;
+    border:2px solid #EEEEEE;
+    /* font-size: 20px; */
+    outline: none;
+    margin-left: 50px;
+}
+#reason{
+    padding-top: -40px;
+}
+#font-size{
+    font-size: 15px;
+}
+
+/* 警告框 */
+#alter,#alter2{
+    width: 350px;
+    height: 200px;
+    background-color:#ffffff;
+    position: absolute;
+    margin-top: -260px;
+    margin-left: 400px;
+    border-radius: 8px 8px 8px 8px;
+    border: 3px solid #888888;
+    text-align: center;
+    box-shadow: 10px 10px 10px #888888;
+    display: none;
+
+}
+#succee,#succee2{
+    position: relative;
+    top:30%;
+    font-size: 25px;
+    color: #333333;
+
+}
+#succee::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #44BE90;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #ffffff;
+
+}
+#succee2::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #dd0c0c;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #ffffff;
+
+}
+#check{
+    position:absolute;
+    top:66px;
+    left:95px;
+}
+#check-1{
+    position: relative;
+    top:20px;
+    left:2px;
+    width:17px;
+    height: 5px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    z-index: 1000000;
+   animation:firstone 0.4s inherit;
+   -webkit-animation:firstone 0.4s ;
+}
+@keyframes firstone {
+	0% {
+		opacity: 0;
+		 width: 0px;;
+	}	
+	100% {
+		opacity: 1;
+		 width: 17px;;
+	}
+}
+
+#check-2{
+    position: relative;
+    top:12px;
+    left: 11px;
+    width:30px;
+    height: 5px;
+    background-color: #fff;
+    transform: rotate(-50deg);
+    z-index: 1000000;
+    animation:firsttwo 1s inherit;
+    animation-delay: 0.4s;
+    -webkit-animation:firsttwo 0.4s ;
+    -webkit-animation-delay:0.2s;
+    opacity: 0;
+    animation-fill-mode:forwards;
+}
+@keyframes firsttwo {
+	0% {
+		opacity: 0;
+		 width: 0px;;
+	}	
+	100% {
+		opacity: 1;
+		 width: 30px;;
+	}
+}
+
+#p{
+    font-size: 18px;
+    margin-top: 70px;
+    color: #333333;
+}
+#check-3{
+    color:#fff;
+    margin-left: 8px;
+    margin-top: -13px;
+    font-size: 60px;
+}

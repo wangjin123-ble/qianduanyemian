@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/icon图标0/iconfont.css">
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+    <style type="text/css"></style>
+    <title>云淄主页</title>
+</head>
+<body style="overflow: hidden;" >
+    <script src="../JS/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js "></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 左侧导航栏 -->
+    <div id="tocenter"> 
+      <!-- copy点 -->
+            <div id="blue-line">
+                <div id="title">
+                   <div id="main-logo" > <img src="../image/logo.png" alt=""></div>
+                    <span id="main-word">云淄</span>
+                </div>
+            <a href="">  <ul id="min-box">
+              <span id="left-img">&#xe691;</span>
+                <span id="min-word">主页</span>
+            </ul></a>
+              <ul id="min-box-1" onclick="beopen4()">
+                <span id="left-img">&#xe641;</span>
+                  <span id="min-word">管理</span>
+                  <span id="be-more-4">&#xe637;</span>
+              </ul>
+                  <ul id="two-box-4">
+                    <a href="./其他页面/档案编辑/管理-档案编辑-主页/HTML/主页.html"><li id="two-word">档案编辑</li></a>
+                   <a href="./其他页面/管理审批/管理-审批-主页/HTML/主页.html"> <li id="two-word">管理审批</li></a>
+                    <a href="./其他页面/黑名单/管理-黑名单-主页/HTML/主页.html"><li id="two-word">黑名单</li></a>
+              </ul>
+              <ul id="min-box-2" onclick="beopen1()">
+                <span id="left-img">&#xe7a4;</span>
+                  <span id="min-word">物品档案</span>
+                  <span id="be-more-0">&#xe637;</span>
+              </ul>
+                    <ul id="two-box-0">
+                      <a href="./其他页面/物品档案/物品档案/物品档案.html"><li id="two-word">目录</li></a>
+                   <a href="./其他页面/物品档案/书籍简介/书籍简介.html"> <li id="two-word">查询</li></a>
+           </ul>
+              <ul id="min-box-3" onclick="beopen()" onfocus="tolook()">
+                <span id="left-img">&#xe6f9;</span>
+                  <span id="min-word">物品交流</span>
+                  <span id="be-more-1">&#xe637;</span>
+              </ul>
+                    <ul id="two-box-1">
+                         <a href="./其他页面/物品交流/物品交流-预约/HTML/预约.html"><li id="two-word">预约</li></a>
+                         <a href="./其他页面/物品交流/物品交流-借阅/HTML/借阅.html"><li id="two-word">借用</li></a>
+                        <a href="./其他页面/物品交流/物品交流-归还/HTML/归还.html"> <li id="two-word">归还</li></a>
+                    </ul>
+                     <!-- 修改部分(将id:be-more改成了be-more-3;min-box的盒子后加了onclick="beopen3()"，也可以直接把这部分粘贴过去替代原有内容) -->
+                <ul id="min-box-4" onclick="beopen3()">
+                  <span id="left-img">&#xe613;</span>
+                         <span id="min-word">统计分析</span>
+                         <span id="be-more-3">&#xe637;</span>
+                 </ul>
+                    <!-- 修改部分 -->
+                 <!-- 添加部分 -->
+                     <ul id="two-box-3">
+                     <a href="./其他页面/统计分析/统计分析1/HTML/统计分析1.html"><li id="two-word">统计分析</li></a>
+                     <a href="../HTML/其他页面/统计分析/统计报表/统计报表.html"><li id="two-word">统计报表</li></a>
+                     </ul>
+                  <!-- 添加部分 -->
+                 <ul id="min-box-5" onclick="beopen0()">
+                  <span id="left-img">&#xe690;</span>
+                         <span id="min-word">资产维修</span>
+                         <span id="be-more-2">&#xe637;</span>
+                 </ul> 
+                     <ul id="two-box-2">
+                         <a href="./其他页面/资产维修/维修申请/维修申请.html"><li id="two-word">维修申请</li></a>
+                         <a href="./其他页面/资产维修/报修处理/报修处理.html"><li id="two-word">报修处理</li></a>
+                     </ul>
+                        <a href="./其他页面/帮助/帮助.html">    <ul id="min-box-6">
+                          <span id="left-img">&#xea02;</span>
+                                  <span id="min-word">帮助</span>
+                         </ul></a>
+                 <a href="javascript:history.back(-1)"><img id="toback" src="../image/Log out.png" alt=""> </a>  
+            </div>
+
+            <!-- 上方导航栏 -->
+            <div id="white-line">
+                   <!-- 左侧各项 -->
+              <span id="menu">&#xe505;</span>
+              <div id="record"><span style="position: relative; top:35%">我的记录</span></div>
+               <!--搜索框 -->
+               <div id="search">
+                 <span>搜索 &nbsp;</span>
+                 <input id="search-box" type="text" value="例如：书名" onclick="back()" onblur="back0()"> 
+                  <button id="button-box" > <a style="text-decoration: none;" href="./其他页面/物品档案/书籍简介/书籍简介.html"><span id="search-button">&#xe825;</span></a></button>
+               </div>
+               <!-- 右边各项 -->
+                
+                  <a style="text-decoration: none; color: black;" href="./其他页面/个人中心/个人中心-浏览/个人中心-浏览.html">
+                    <div id="head-img"> <span style="position: relative; top:4px;">头像</span></div>
+                  </a>
+                <a style="text-decoration: none;" href="./其他页面/通知/HTML/通知.html"><span id="alarm">&#xe605;</span></a>
+                <span id="set" onclick="beopen2()">&#xe51b;</span>
+                  <div id="set-up">
+                    <a href="../HTML/其他页面/重置密码/HTML/重置密码.html" style="text-decoration: none; color: black;"><ul id="min-cell" style="font-size:14px;border-radius:8px 8px 0 0;">重置密码</ul></a>
+                    <a href="../HTML/其他页面/注销/HTML/注销.html" style="text-decoration: none; color: black;"><ul id="min-cell" >注 销</ul></a>
+                    <ul id="min-cell" style=" border-radius: 0 0 8px 8px;">更 多</ul>
+                  </div> 
+            </div>
+            <!-- 中间白块或图标 -->
+            <div>
+              <div id="middle-blue">
+                <div id="word-box">
+                  <span>本月逾期未归还</span><br>
+                  <span style="font-size: 40px;">0</span>
+                </div>
+                <img src="../image/Background.png" alt="">
+          </div>
+          <div id="middle-purple">
+            <div id="word-box">
+              <span>本月预约成功</span><br>
+              <span style="font-size: 40px;">15</span>
+            </div>
+            <img src="../image/Background1.png" alt="">
+      </div>
+      <div id="middle-red">
+        <div id="word-box">
+          <span>本月借阅成功</span><br>
+          <span style="font-size: 40px;">17</span>
+        </div>
+        <img src="../image/Rounded Rectangle 3.png" alt="">
+  </div>
+            </div>
+            <!-- 下方主要板块 -->
+            <div id="main-block">
+                <table style="border-left: none;border-right: none;">
+                        <thead>
+                          <tr id="top-line">
+                            <td id="mycord" colspan=15>我的记录<span id="book">&#xebb9;</span></td>
+                            <td id="progress" colspan=10>进 度</td>
+                            <td id="top-word" colspan=6>处理日期</td>
+                            <td id="top-word"  colspan=6>状 态</td>
+                            <td id="top-word"  colspan=6>归 还</td>
+                            <td id="top-word"  colspan=6>借书人</td>
+                        </tr>
+                        </thead>
+                      <tbody id="app">
+                        <tr id="top-line-1" v-for="it in message" >
+                          <td id="line-word-1"  colspan=16 >{{it.apply_book}}</td>
+                          <td id="line-word" v-show="it.status=='0'"  colspan=12><img style="position: relative;left: -40px;" src="../image/3.png" alt=""></td>
+                          <td id="line-word" v-show="it.status=='3'" colspan=12><img style="position: relative;left: -40px;" src="../image/2.png" alt=""></td>
+                          <td id="line-word" v-show="it.status=='1'" colspan=12><img style="position: relative;left: -40px;" src="../image/组 1.png" alt=""></td>
+                          <td id="line-word" v-show="it.status=='2'" colspan=12><img style="position: relative;left: -40px;" src="../image/组 5.png" alt=""></td>
+                          <td id="line-word"  colspan=7>{{it.apply_time}}</td>
+                          <td id="condition" class="condition" v-show="it.status=='0'" colspan=6>阅读中</td>
+                          <td id="condition" class="condition-ing" v-show="it.status=='3'" colspan=6>审核中</td>
+                          <td id="condition" class="condition-ed" v-show="it.status=='1'" colspan=6>已归还</td>
+                          <td id="condition" class="condition-out" v-show="it.status=='2'" colspan=6>已逾期</td>
+                          <td id="line-word" colspan=6>{{it.return_time}}</td>
+                          <td id="line-word"  colspan=6>{{it.apply_name}}</td>
+                      </tr>
+                      </tbody>
+                </table>
+            </div>
+            <button id="add-more"><span id="add">&#xe503;</span> 添加更多</button>
+              <script>
+                var app=new Vue({
+                  el:"#app",
+                  data:{
+                    message:[
+                      {apply_book:"",apply_time:"",status:"",return_time:"",apply_name:""},
+                    ],
+                    token:''
+                  },
+                  created(){
+                  this.token=localStorage.getItem('token');
+                       },
+                  mounted:function(){
+                      this.loading();
+                  },
+                  methods:{
+                       loading:function()
+                              {    
+                                  console.log(this.token);
+                                  if(this.token==''){
+                                  alert("请先登录");
+                                
+                                  window.location.href="../../登陆页面/HTML/yunzi.html";
+                                  }
+                                  var that=this;
+                                 axios.post("http://javahome1.natapp1.cc/Empproject/sbr",
+                                 {token:this.token+''},
+                                {headers: {"token":this.token}}).then
+                                (function(response) {
+                                  console.log(response);
+                                  that.message=response.data;
+                                //  that.message.forEach(e => {
+                                //    response.data.forEach(a => {    
+                                //    e.apply_book=a.apply_book;
+                                //    e.apply_time=a.apply_time;
+                                //    e.status=a.status;
+                                //    e.return_time=a.return_time;
+                                //    e.apply_name=a.apply_name;  
+                                //    });
+                                //  });
+                                },function(err){})
+                              }
+                  }
+                })
+              </script>
+        
+            </div>
+
+    </div> 
+</body>
+</html>
+<!-- https：//autumnfish.cn/api/joke -->

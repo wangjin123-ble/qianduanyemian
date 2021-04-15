@@ -1,0 +1,284 @@
+#top-right{
+    position:absolute;
+    top:30px;
+     right: 100px;
+     font-size: 20px;
+     color: #ffffff;
+     display:inline-block;
+}
+.topright{
+    position: relative;
+    color: currentColor;
+
+}
+.topright:hover{
+    color:#0a8fc8;
+}
+#time{
+    position: absolute;
+    top:270px;
+    right:230px;
+    z-index: 9000;
+    color: #ffffff;
+    font-size: 20px;
+    display: none;
+}
+#time-2{
+    position: absolute;
+    top:270px;
+    right:230px;
+    z-index: 9000;
+    color: #ffffff;
+    font-size: 16px;
+    display: block;
+}
+#get{
+    border: none;
+    background-color:transparent;
+    font-size: 18px;
+    color:#999999;
+    cursor: pointer;
+}
+#get:hover{
+    color:#0a8fc8;
+}
+body{
+    background-image: url(../image/blue3.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+#block{
+    position: absolute;
+    height: 1200px;
+    width: 1890px;
+    background-color: black;
+    opacity: 0.4;
+}
+/* 左侧背景 */
+.main-img{
+    position: relative;
+    width:880px;
+    height: 600px;
+    top:60px;
+    left:115px;
+    background-image: url(../image/团队合作.png);
+    background-size:auto 100%;
+    border-radius: 15PX;
+    box-shadow: 8px 8px 5px black;
+    animation: toright 12s linear infinite alternate;   
+}
+/* 飘过白带 */
+#white-slip{
+    position: absolute;
+    left: 180px;
+    height: 600px;
+    width: 50px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    transform: skew(30deg);
+    animation:whiteline 6s ease-in  infinite;  
+    animation-delay: 0.2s;  
+    z-index: 10000000;
+}
+#white-slip-1{
+    position: absolute;
+    left: 165px;
+    height: 500px;
+    width: 40px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    transform: skew(30deg);
+    animation:whiteline 6s ease-in  infinite;  
+    animation-delay: 0.4s; 
+    z-index: 10000000;
+}
+@keyframes whiteline{
+    0%{display: block;opacity: 0;}
+    8%{opacity: 0.8;}
+    20%{left:580px;opacity: 0;}
+    100%{left:580px;opacity: 0;}
+}
+@keyframes toright{
+    to{
+        background-position:100% 0;
+    }
+}
+/* 白云 */
+#cloud{
+    position: absolute;
+    left:800px;
+    top:80px;
+    filter: saturate(6);
+    animation:cloud 9s linear infinite;  
+}
+#cloud-1{
+    position: absolute;
+    left:800px;
+    top:140px;
+    filter: saturate(6);
+    animation:cloud 11s linear infinite;  
+    animation-delay: 3s;
+}
+#cloud-2{
+    position: absolute;
+    left:100px;
+    top:140px;
+    filter: saturate(6);
+    animation:cloud-1 7s linear infinite;  
+}
+@keyframes cloud-1{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    90%{left: 20px;}
+    100%{left:10px;opacity: 0;}
+}
+@keyframes cloud{
+    0%{opacity: 0;}
+    20%{opacity: 1;}
+    90%{left: 500px;}
+    100%{left:400px;opacity: 0;}
+}
+/* 右侧蓝色背景 */
+#main-box{
+    position:absolute;
+    width: 480px;
+    height: 600px;
+    top:60px;
+    left:910px;
+    background-color: #D5E0F6;
+    display:inline;
+    clear: both;
+    text-align: center;
+    border-radius: 0 25px 25px 0;
+    box-shadow: 8px 8px 8px black;
+}
+/* 标题 */
+.title{
+    position: relative;
+    top:50px;
+    color:#2F4DBF;
+    font-size: 60px;
+}
+/* 输入框 */
+#first-form{
+    position: relative;
+    top:0px;
+    left:20%;
+    width: 300px;
+    height:100px;
+    display:block;
+    border:none;
+    background:none;
+    color:#999999;
+    font-size:25px;
+    outline: none;
+}
+#first-form-1{
+    position: relative;
+    top:0px;
+    left:20%;
+    width: 300px;
+    height:100px;
+    display:block;
+    border:none;
+    background:none;
+    color:#999999;
+    font-size:25px;
+    outline: none;
+}
+/* 输入框外包的盒子，用于写底部灰线 */
+#from-number{
+    position: relative;
+    display: block;
+    width:400px;
+    height: 150px;
+    left:10%;
+    top:60px;
+    padding-left: 20px;
+    margin:-5px;
+    margin-top: -40px;
+    border-bottom:3px  solid#B7BFCE;
+}
+/* 左侧图片 */
+#left-img{
+    position: relative;
+    top:85px;
+    transform: scale(0.8);
+    margin-right: 300px;
+    transition: 1s;
+}
+#left-img:hover{
+    top:90px;
+}
+
+/* 链接的小字 */
+#min-word{
+    position: relative;
+    top:105px;
+    color:#999999;
+    font-size: 20px;
+    left:-15%;
+    display: inline;
+    margin-left: 150px;
+}
+#min-word:hover{
+    color:#0a8fc8;
+}
+/* 按钮 */
+#main-button,#main-button-1{
+    position: absolute;
+    top:490px;
+    left:120px;
+    width: 240px;
+    height:50px;
+    border-radius:50px 50px 50px 50px ;
+    border:none;
+    font-size: 25px;
+    color:#2F4DBF;
+    background: linear-gradient(45deg,#8EB1ED,#8A83F7);
+    outline: none;
+    transition: 1s;
+}
+#main-button-1{
+    display: none;
+}
+#main-button-1:hover{
+    transform: scale(0.9);
+}
+#main-button:hover{
+    transform: scale(0.9);
+}
+/* 容器盒子 */
+#big-box{
+ 
+    width: 500px;
+    height: 280px;
+  
+    
+}
+/* 出现图片 */
+#succee{
+    position: relative;
+    transform: scale(0.7);
+    top:-260px;
+    left:10%;
+    display: none; 
+}
+#succee-word{
+    position: absolute;
+    top:400px;
+    left:190px;
+    font-size: 25px;
+    color:#A5A8AC;
+    display: none;
+}
+/* 用户协议 */
+#agree{
+    position: relative;
+    top:122px;
+    left:-60px;
+    font-size: 12px;;
+}
+#num:hover{
+    color:#2F4DBF;
+}

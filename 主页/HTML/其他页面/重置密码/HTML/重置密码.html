@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/icon图标0/iconfont.css">
+    <link rel="shortcut icon" href="../../../../favicon.ico" />
+    <style type="text/css"></style>
+    <title>重置密码</title>
+</head>
+<body style="overflow: hidden;">
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../JS/index.js"></script>
+     
+
+            <!-- 上方导航栏 -->
+            <div id="white-line-1"></div>
+            <div id="white-line">
+                   <!-- 左侧各项 -->
+              <span id="logo">云淄</span>
+            <a href="../../../主页.html"><div id="record"><span style="position: relative; top:35%">返回主页</span></div></a>
+                     <!--搜索框 -->
+               <div id="search">
+                 <span>搜索 &nbsp;</span>
+                 <input id="search-box" type="text" value="例如：书名" onclick="back()" onblur="back0()"> 
+                  <button id="button-box" > <span id="search-button">&#xe825;</span></button>
+               </div>
+    </div> 
+        <!--蓝色标题栏  -->
+        <div id="blue-line">
+          <span id="inform">重置密码</span>
+        </div>
+        <!-- 白色主板 -->
+        <div id="white-box">
+           <form id="userData" @submit.prevent="submitFrom()">
+            <span id="warn">请先通过以下验证</span><br>
+            <div id="main-input">
+               <h4>登陆邮箱  &nbsp;<input id="edit"  type="text" name="mail" v-model="mail"></h4>
+            </div>
+            <div id="main-input">
+             <h4>初始密码  &nbsp;<input id="edit"  type="text" name="password" v-model="password"></h4>
+          </div>
+          <div id="main-input">
+             <h4>新的密码  &nbsp;<input id="edit-0"  type="password" value="" name="password2" v-model="new_password"></h4>
+          </div>
+          <div id="main-input">
+             <h4>确认密码  &nbsp;<input id="edit-1"  type="password" value="" onclick="back1()" name="password3" v-model="new_password_again"></h4>
+          </div>
+          <button id="beout" onclick="main()">重置</button>
+           </form>
+           <script>
+            var app = new Vue({
+              el: "#userData",
+                data:{   
+                    mail:"",
+                    password:"",
+                    new_password:"",
+                    new_password_again:"",
+                    token:'',
+                    },
+              methods:
+              {
+                   submitFrom()
+                  {    
+                     this.token=localStorage.token;
+                     console.log(this.token);
+                    var that=this;
+                    var params = new URLSearchParams();
+                    params.append('key', 'value');
+                     axios.post("http://javahome1.natapp1.cc/Empproject/cps",
+                     {mail:this.mail+'',password:this.password+'',new_password:this.new_password+'',new_password_again:this.new_password_again+'',token:this.token},
+                     {headers: {"token":localStorage.token}}).then
+                    (function(response) {
+                       console.log(that.password);
+                       console.log(that.new_password_again);
+                       console.log(that.new_password);
+                      console.log(response.data);
+                      if(response.data==false){
+                        document.getElementById("edit-1").type="text";
+                        document.getElementById("edit-1").style.color="red"
+                        document.getElementById("edit-1").value="密码格式错误或与邮箱不匹配"
+                     }
+                      else{
+                         document.getElementById("alter").style.display="block";    
+                      }
+                    
+                    },function(err){})
+                  }
+              }
+          })
+        </script>
+
+         <!-- 提示框 -->
+            <div id="alter">
+               <h4 id="succee">重置密码成功</h4>
+               <div id="check">
+                  <div id="check-1"></div>
+                  <div id="check-2"></div> 
+               </div>
+               <a style="text-decoration: none; color:#000000;" href="../../../../../登陆页面/HTML/yunzi.html"><h4 id="rego">请您重新登陆</h4></a>
+               
+            </div>
+             
+             
+          
+
+        </div>
+       
+          
+             
+</body>
+</html>

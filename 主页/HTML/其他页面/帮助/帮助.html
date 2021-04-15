@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="iconfont.css">
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <title>帮助</title>
+</head>
+<body class="body">
+
+<!-- 左侧导航栏 -->
+ 
+<div id="tocenter"> 
+    <div id="blue-line">
+        <div id="title">
+           <div id="main-logo" > <img src="../帮助/img/Logo.png" alt=""></div>
+            <span id="main-word">云淄</span>
+        </div>
+    <a href="../../主页.html">  <ul id="min-box">
+      <span id="left-img">&#xe691;</span>
+        <span id="min-word">主页</span>
+    </ul></a>
+      <ul id="min-box-1" onclick="beopen4()">
+        <span id="left-img">&#xe641;</span>
+          <span id="min-word">管理</span>
+          <span id="be-more-4">&#xe637;</span>
+      </ul>
+          <ul id="two-box-4">
+            <a href="../档案编辑/管理-档案编辑-主页/HTML/主页.html"><li id="two-word">档案编辑</li></a>
+           <a href="../管理审批/管理-审批-主页/HTML/主页.html"> <li id="two-word">管理审批</li></a>
+            <a href="../黑名单/管理-黑名单-主页/HTML/主页.html"><li id="two-word">黑名单</li></a>
+      </ul>
+      <ul id="min-box-2" onclick="beopen1()">
+        <span id="left-img">&#xe7a4;</span>
+          <span id="min-word">物品档案</span>
+          <span id="be-more-0">&#xe637;</span>
+      </ul>
+            <ul id="two-box-0">
+              <a href="../物品档案/物品档案/物品档案.html"><li id="two-word">目录</li></a>
+           <a href="../物品档案/书籍简介/书籍简介.html"> <li id="two-word">查询</li></a>
+   </ul>
+      <ul id="min-box-3" onclick="beopen()" onfocus="tolook()">
+        <span id="left-img">&#xe6f9;</span>
+          <span id="min-word">物品交流</span>
+          <span id="be-more-1">&#xe637;</span>
+      </ul>
+            <ul id="two-box-1">
+                 <a href=""><li id="two-word">预约</li></a>
+                 <a href=""><li id="two-word">借用</li></a>
+                <a href=""> <li id="two-word">归还</li></a>
+            </ul>
+             <!-- 修改部分(将id:be-more改成了be-more-3;min-box的盒子后加了onclick="beopen3()"，也可以直接把这部分粘贴过去替代原有内容) -->
+        <ul id="min-box-4" onclick="beopen3()">
+          <span id="left-img">&#xe613;</span>
+                 <span id="min-word">统计分析</span>
+                 <span id="be-more-3">&#xe637;</span>
+         </ul>
+            <!-- 修改部分 -->
+         <!-- 添加部分 -->
+             <ul id="two-box-3">
+             <a href="../统计分析/统计分析1/HTML/统计分析1.html"><li id="two-word">统计分析</li></a>
+             <a href="../统计分析/统计报表/统计报表.html"><li id="two-word">统计报表</li></a>
+             </ul>
+          <!-- 添加部分 -->
+         <ul id="min-box-5" onclick="beopen0()">
+          <span id="left-img">&#xe690;</span>
+                 <span id="min-word">资产维修</span>
+                 <span id="be-more-2">&#xe637;</span>
+         </ul> 
+             <ul id="two-box-2">
+                 <a href="../资产维修/维修申请/维修申请.html"><li id="two-word">维修申请</li></a>
+                 <a href="../资产维修/报修处理/报修处理.html"><li id="two-word">报修处理</li></a>
+             </ul>
+                    <ul id="min-box-6">
+                  <span id="left-img">&#xea02;</span>
+                          <span id="min-word">帮助</span>
+                 </ul> 
+         <a href="../../登陆页面/HTML/yunzi.html"><img id="toback" src="../image/Log out.png" alt=""> </a>  
+    </div>
+</div> 
+    <div class="top"></div>
+    
+    <div class="right" style="transform: scale(0.9);">
+
+        
+        <div class="title">&bull;&emsp;常用自助服务</div>
+
+        <!-- 跳转到主页 -->
+        <a href="../../主页.html"><div class="case" id="case1">
+        <img id="img" src="./img/5.png" alt="">
+        <div class="name1">查看进度</div>    
+        </div></a>
+        
+        <!-- 跳转到主页 -->
+        <a href="../../主页.html"><div class="case">
+            <img id="img1" src="./img/6.png" alt="">
+            <div class="name1">订单查询</div>    
+            </div></a>
+
+        <!-- 跳转到个人中心-->
+            <a href="../../其他页面/个人中心/个人中心-主要/个人中心-主要.html"><div class="case">
+            <img id="img1" src="./img/8.png" alt="">
+                <div class="name1">账户安全</div>    
+                </div></a>
+
+            <div class="case" onclick="main()">
+                <div class="four">
+                    <div>
+                   <img id="img" src="./img/0.png" alt=""></div>
+                    <div class="name1" > 处理逾期</div> 
+               </div>
+            </div>    
+            <div id="alter" onclick="main1()">
+                <div id="p">请自行到书院进行归还</div>
+             </div>
+
+        <div class="title">&bull;&emsp;热点问题</div>
+        <div class="list1" id="right">
+            <ul class="ul">
+                <li>
+                    <div class="list"> &bull;&emsp;预约后，还可以进行修改吗?</div>
+                    <div class="detail">
+                    <div class="content">
+                        可以，点击物品交流页面，再点击预约 <br>
+                        按钮，进行取消预约即可。</div>
+                    </div>
+                </li>
+                <li><div class="list">&bull;&emsp;
+                    预约失败后，可以进行二次预约吗?</div>
+                    <div  class="detail">
+                    <div class="content">
+                        可以，在接收到预约失败的停止之后，<br>
+                        还可以对改书籍进行二次的预约。</div>
+                    </div>
+                </li>
+                <li><div class="list">&bull;&emsp;
+                    没有我想要的书籍?</div>
+                    <div class="detail">
+                    <div class="content">
+                        很抱歉没能为您提供您需要的书籍，本<br>
+                        网站的相关管理员已经尽力在购入了。</div>
+                    </div>
+                    
+                </li>
+                <li><div class="list">&bull;&emsp;
+                    可不可以催单??</a></div>
+                    <div class="detail">
+                    <div class="content">
+                        很抱歉，相关管理员已经尽力在处理您<br>
+                        的预约或相关审核，请您耐心等待！</div>
+                    </div>
+                    
+                </li>
+            </ul>
+            <ul class="ul">
+                <li>
+                    <div class="list">&bull;&emsp;书籍的借阅时间是多久？</div>
+                        
+                        <div  class="detail">
+                        <div class="content">
+                            书籍的借阅时间为一个月。</div>
+                        </div>
+                </li>
+                <li>
+                    <div class="list">&bull;&emsp;为何审核失败？</div>
+                        
+                    <div  class="detail" id="detail2">
+                    <div class="content">
+                        很抱歉，审核失败的原因可能有以下几 <br>
+                        点：一、逾期归还次数过多。二、该书<br>
+                        籍已被先预约的用户借阅成功。</div>
+                    </div>
+                   </li>
+                <li>
+                    <div class="list">&bull;&emsp;审核失败后，可以进行第二次申请吗？</div>
+                        
+                    <div  class="detail">
+                    <div class="content">
+                        可以，即再次点开物品交流页面，点击 <br>
+                        预约按钮，再次预约即可。</div>
+                    </div>
+                  
+                   </li>
+                <li>
+                    <div class="list">&bull;&emsp;该如何通过审核？</div>
+                        
+                    <div  class="detail" id="detail2">
+                    <div class="content" >
+                        最好做到不要有逾期归还的记录，有时 <br>
+                        审核失败是书籍被其他优先借阅的用户 <br>
+                        借阅，您再次预约即可。</div>
+                    </div>
+                  
+                    </li>
+            </ul>
+        
+        </div>
+    </div>
+  
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>

@@ -1,0 +1,950 @@
+ /*居中盒子  */
+ #tocenter{
+     margin:0 auto;
+ } 
+ /*左侧底部蓝色背景 */
+ #blue-line{
+     position: relative;
+     left:0%;
+     width: 260px;
+     height: 755px;
+     background-color: #29304B;
+     z-index: 0;
+     }
+/* 上端LOGO及名称 */
+        /* 主体盒子 (背景)   最上端导航栏的参数是这个盒子的高，60px*/
+   #title{
+       position: relative;
+       top:0px;
+       left:0px;
+       height: 60px;
+       width: 260px;
+       background-color:#171C30 ;
+   }
+        /* 左上角LOGO*/
+   #main-logo{
+    position:absolute;
+    top:-108px;
+    left:-108px;
+    z-index: 1000;
+    display: inline-block;
+    transform: scale(0.18);
+   }
+         /* 名称 */
+   #main-word{
+       position: absolute;
+       top:12px;
+       left:70px;
+       color:aliceblue;
+       font-size: 25px;
+   }
+/* 一级菜单 */
+/* 逐列动画 */
+@keyframes open{
+    to{width:260px;opacity: 1;}
+}
+#min-box,#min-box-1,#min-box-2,#min-box-3,#min-box-4,#min-box-5,#min-box-6{
+    position: relative;
+    width: 0px;
+    height: 50px;
+    background-color:#29304B;
+    text-align: center;
+    opacity: 0;
+    animation:open  0.5s linear;
+    animation-fill-mode: forwards;
+}
+#min-box-1{animation-delay: 0.1s;}
+#min-box-2{animation-delay: 0.2s;}
+#min-box-3{animation-delay: 0.3s;}
+#min-box-4{animation-delay: 0.4s;}
+#min-box-5{animation-delay: 0.5s;}
+#min-box-6{animation-delay: 0.6s;}
+#min-box:hover,#min-box-1:hover,#min-box-2:hover,#min-box-3:hover,#min-box-4:hover,#min-box-5:hover,#min-box-6:hover{
+    background-color: #2F4DBF;
+}
+    /* 标题文字 */
+    #min-word{
+        position: absolute;
+        top:32%;
+        left: 28%;
+        color: #ffffff;
+        font-size: 15px;
+
+    }
+    /* 左侧图片 */
+    #left-img{
+        position: absolute;
+        top:32%;
+        left:-35%;
+        position: relative;
+        font-family: "iconfont" !important;
+        font-size: 25px;
+        font-style: normal;
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    /* 可展开标志 */
+    #be-more,#be-more-0,#be-more-1,#be-more-2{
+        position: absolute;
+        top:18px;
+        left:210px;
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: 1s;
+        z-index: 100;
+    }
+    #be-more:hover{
+        left:220px;
+    }
+    #be-more-0:hover,#be-more-1:hover,#be-more-2:hover{
+        transform: rotate(90deg);
+    }
+    /* 标题文字 */
+    #min-word{
+        position: absolute;
+        top:32%;
+        left: 28%;
+        color: #ffffff;
+        font-size: 15px;
+
+    }
+    #min-word-0{
+        position: absolute;
+        top:32%;
+        left: 28%;
+        color: #ffffff;
+        font-size: 15px;
+
+    }
+    /* 左侧图片 */
+    #left-img{
+        position: absolute;
+        top:32%;
+        left:-35%;
+        position: relative;
+        font-family: "iconfont" !important;
+        font-size: 25px;
+        font-style: normal;
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    /* 可展开标志 */
+ /* 可展开标志 */
+ #be-more,#be-more-0,#be-more-1,#be-more-2,#be-more-4{
+    position: absolute;
+    top:18px;
+    left:210px;
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: 1s;
+    z-index: 100;
+}
+#be-more:hover{
+    left:220px;
+}
+#be-more-0:hover,#be-more-1:hover,#be-more-2:hover,#be-more-4:hover{
+    transform: rotate(90deg);
+}
+/* 二级菜单 */
+        /* 二级菜单的盒子 ，用于调整二级菜单位置*/
+#two-box-0,#two-box-1,#two-box-2,#two-box-4{
+    position: relative;
+    width: 230px;
+    height:75px;
+    left:30px;
+    display:none; 
+}
+#two-box-2{
+    height:52px;
+}
+#two-box-0{
+    height: 52px;
+}
+        /* 二级菜单中每一项的盒子，用于调整字体和间距参数 */
+        #two-word,#two-word-1,#two-word-2,#two-word-3{
+            font-size: 15px;
+            color:#999999;
+            margin-bottom: 5px;
+            margin-top: 3px;
+        }
+        #two-word:hover{
+            color: #ffffff;
+        }
+        
+        #two-word-1:hover{
+            color: #ffffff;
+        }
+        
+        #two-word-2:hover{
+            color: #ffffff;
+        }
+        
+        #two-word-3:hover{
+            color: #ffffff;
+        }
+
+
+/* 底层返回按钮 */
+#toback{
+    position: relative;
+    left:5%;
+    top:60px;
+    transform: scale(0.9);
+    transition: 1.2s;
+}
+#toback:hover{
+    transform: scale(0.8);
+}
+/* 上方导航栏 */
+#white-line{
+    position:absolute;
+    top:0px;
+    height: 60px;
+    width: 1275px;
+    left:260px;
+    background-color: #ffffff;
+
+}
+#menu{
+    position:absolute;
+    top:15px;
+    left:50px;
+    font-family: "iconfont" !important;
+        font-size: 30px;
+        font-style: normal;
+        color:#29304B;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: rotate(180deg);
+        cursor:default;
+        transition: 0.8s;
+}
+#menu:hover{
+    transform: scale(0.8) rotate(180deg);
+}
+#record{
+    position:absolute;
+    left:130px;
+    height:60px;
+    width: 100px;
+    text-align: center;
+    color: #000000;
+    border-left: 2px solid #E8EEF0;
+    border-right: 2px solid #E8EEF0;
+    border-bottom:5px solid #2F4DBF;
+}
+        /* 搜索框 */
+#search{
+    position: relative;
+    top:10px;
+    left:610px;
+    width: 350px;
+    height:25px;
+    border-radius: 7px 7px 7px 7px;
+    border :2px solid #C7D8DE;
+    padding: 5px;
+    font-size: 15px;
+    z-index: 1000;
+}
+#search-box{
+    position: relative;
+    top:-1px;
+    width: 220px;
+    height: 28px;
+    color:#999999;
+    border: none;
+    outline: none;
+}
+    /* 搜索按钮 */
+    #search-button{
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        color: #89979C;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    #button-box{
+        position: relative;
+        left:50px;
+        background-color:transparent;
+        border: none;
+        outline: none;
+        transition: 0.8s;
+    }
+    #button-box:hover{
+       transform: scale(0.8);
+    }
+    /* 右边三块 */
+            /* 头像 */
+    #head-img{
+        position: relative;
+        top:13px;
+        left:1030px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #707070;
+        color: #707070;
+        border-radius: 50% 50%;
+        font-size: 15px;
+        text-align: center;   
+        cursor: default;
+    }
+        /* 提醒 */
+    #alarm{
+        position: relative;
+        top:-23px;
+        left:1100px;
+        font-family: "iconfont" !important;
+        font-size: 35px;
+        font-style: normal;
+        color: #89979C;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        cursor: default;
+        transition: 0.8s;
+    }
+    #alarm:hover{
+         color:#2F4DBF;
+       top:-65px
+    }
+    
+        /* 设置 */
+        #set{
+            position: relative;
+            top:-23px;
+            left:1110px;
+            font-family: "iconfont" !important;
+            font-size: 32px;
+            font-style: normal;
+            color:#5F9DB5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-left: 15px;
+            cursor: default;
+            transition: 1s;
+        }
+        #set:hover{
+            transform: rotate(90deg);
+        }
+        #set-up{
+            position: relative;
+            top:-50px;
+            left:1150px;
+            width: 60px;
+            height: 80px;
+            font-size: 15px;
+            border: 2px solid #707070;
+            border-radius: 10px 10px 10px 10px;
+            z-index: 100;
+            text-align: center;
+        
+            display: none;
+         
+        }
+        #min-cell{
+            background-color: #ffffff;
+            border-bottom: 2px solid #29304B;
+            height: 25px;
+        }
+        #min-cell:hover{
+            background-color:#1F87DD;
+            color:  #ffffff;
+            opacity: 0.8;
+        }
+    
+/* 中间色块 */
+#middle-blue,#middle-purple,#middle-red{
+    position:absolute;
+    top:-60px;
+    left: 230px;
+    width: 250px;
+    height:100px;
+    display:inline;
+    transform: scale(0.9);
+}
+#middle-purple{
+    left:630px;
+}
+#middle-red{
+    left:1030px;
+}
+#word-box{
+    position: relative;
+    top:180px;
+    left: 100px;
+    color: #ffffff;
+    font-size: 30px;
+}
+/* 下方主要板块 */
+#main-block{
+    position:absolute;
+    top:240px;
+    left: 310px;
+    background-color: #ffffff;
+    width: 1170px;
+    height:465px;
+}
+#top-line{
+    position: relative;
+    top:0px;
+    background-color: #D3E4E9;
+    width:1170px;
+    height: 50px;
+}
+#mycord{
+    position: relative;
+    top:10px;
+    left:10px;
+    font-size: 20px;
+}
+#mycord::before{
+    content: "";
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	border-radius:3px 3px 3px 3px;
+	background: #6280F1;
+	vertical-align: middle;
+	margin-right: 32px;
+}
+#book{
+    position: relative;
+    top:10px;
+    left:15px;
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    color:#ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #2F4DBF;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px 8px 8px 8px;
+}
+#top-word{
+    position: relative;
+    left:230px;
+    display: inline;
+    top:10px;
+    width:40px;
+    margin-left: 90px;
+}
+/* 主体表格 */
+#min-line{
+    position: relative;
+    top:0px;
+    background-color: #ECF8FC;
+    width:1170px;
+    height: 50px;
+}
+#min-line-1{
+    position: relative;
+    top:0px;
+    background-color: #ffffff;
+    width:1170px;
+    height: 50px;
+}
+#book-record{
+    position: relative;
+    top:15px;
+    left:10px;
+    width: 400px;
+    font-size: 16px;
+}
+#book-record::before{
+    content: "";
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	border-radius:3px 3px 3px 3px;
+	background: #6280F1;
+	vertical-align: middle;
+	margin-right: 32px;
+}
+/* 后方主表单 */
+ /* 进度 */
+#rate{
+    position: relative;
+    left:450px;
+    width: 120px;
+}
+/* 进度圈 */
+#round{
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color:#6280F1;
+    margin-right: 5px;
+    display: inline-block;
+}
+#round0{
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    border:2px solid #6280F1;
+    margin-right: 5px;
+    display: inline-block;
+}
+/* 借阅时间 */
+#make-time{
+    position: relative;
+    top:-20px;
+    left:610px;
+    width: 100px;
+}
+/* 状态-阅读中 */
+#condition{
+    position: relative;
+    left: 740px;
+    top:-45px;
+    width: 100px;
+    height: 30px;
+    background-color: #B6FBE1;
+    color: #44BE90;
+    border-radius: 25px 25px 25px 25px;
+    text-align: center;
+}
+#reading{
+    position: relative;
+    top:3px;
+}
+#reading::before{
+    content: "";
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	border-radius:50%;
+	background: #44BE90;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+/* 状态-已逾期 */
+#condition-out{
+    position: relative;
+    left: 740px;
+    top:-45px;
+    width: 100px;
+    height: 30px;
+    background-color: #F6CBD5;
+    color: #F62053;
+    border-radius: 25px 25px 25px 25px;
+    text-align: center;
+}
+#outing{
+    position: relative;
+    top:3px;
+}
+#outing::before{
+    content: "";
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	border-radius:50%;
+	background: #F62053;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+/* 状态-审核中 */
+#condition-ing{
+    position: relative;
+    left: 740px;
+    top:-45px;
+    width: 100px;
+    height: 30px;
+    background-color:#FDE0B9;
+    color: #F6A020;
+    border-radius: 25px 25px 25px 25px;
+    text-align: center;
+     
+}
+#doing{
+    position: relative;
+    top:3px;
+}
+#doing::before{
+    content: "";
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	border-radius:50%;
+	background: #F6A020;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+/* 状态-待审核*/
+#condition-will{
+    position: relative;
+    left: 740px;
+    top:-45px;
+    width: 100px;
+    height: 30px;
+    background-color:#CAD7F1;
+    color: #2F4DBF;
+    border-radius: 25px 25px 25px 25px;
+    text-align: center;
+     
+}
+#willing{
+    position: relative;
+    top:3px;
+}
+#willing::before{
+    content: "";
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	border-radius:50%;
+	background: #2F4DBF;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+/* 归还时间 */
+#back-time{
+    position: relative;
+    top:-70px;
+    left:895px;
+    width: 100px;
+}
+/* 借阅人 */
+#loaner{
+    position: relative;
+    top:-90px;
+    left:1070px;
+    width: 100px;
+}
+/* 底部按钮 */
+#add-more{
+    position: absolute;
+    font-size: 15px;;
+    top:413px;
+    left:1000px;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 10px 10px 10px 10px;
+    border: 3px solid #6280F1;
+    color: #6280F1;
+    outline:none;
+    transition: 0.8s;
+}
+#add-more:hover{
+    transform: scale(0.8);
+}
+#add{
+    font-family: "iconfont" !important;
+            font-size: 15px;
+            font-style: normal;
+            color:#6280F1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+}
+
+/* 添加部分 */
+#two-box-3{
+    position: relative;
+    width: 230px;
+    height:45px;
+    left:30px;
+    display:none; 
+}
+#be-more-3{
+    position: absolute;
+    top:18px;
+    left:210px;
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: 1s;
+    z-index: 100;
+}
+
+
+#TianjiaImg{
+    position: absolute;
+    top:80px;
+    left:400px;
+    transform: scale(0.6);
+}
+
+#BookJianjie{
+    position: absolute;
+    top:250px;
+    left:370px;
+    font-size: 20px;
+    color: #666666;
+}
+
+
+
+#DanganZiliao{
+    position: absolute;
+    top:310px;
+    left:400px;
+    background-color: #FFFFFF;
+    width: 350px;
+    height: 200px;
+    text-align:center;
+    color: #666666;
+    font-size: 17px;
+    border-radius: 3px;
+    border: 1px solid #707070;
+}
+
+#complete{
+    position: absolute;
+    top:600px;
+    left:510px;
+    width: 150px;
+    height: 55px;
+    border-radius: 10px;
+    background-color: #5B6DF0;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+#complete:hover{
+    background-color: #41CFE6;
+}
+
+#ZichanLeibie{
+    position: absolute;
+    top:105px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#XiaLaKuang{
+    position: absolute;
+    top:100px;
+    left: 1020px;
+    width: 131px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#BianhaoTxt{
+    position: absolute;
+    top:155px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#BianhaoNumber{
+    position: absolute;
+    top:150px;
+    left: 1020px;
+    width: 191px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+    text-align:center;
+}
+
+#MingchengTxt{
+    position: absolute;
+    top:205px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#MingchengContent{
+    position: absolute;
+    top:200px;
+    left: 1020px;
+    width: 251px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+    text-align:center;
+}
+
+#ZuozheTxt{
+    position: absolute;
+    top:255px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#ZuozheContent{
+    position: absolute;
+    top:250px;
+    left: 1020px;
+    width: 191px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+    text-align:center;
+}
+
+#LeibieTxt{
+    position: absolute;
+    top:305px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#LeibieContent{
+    position: absolute;
+    top:300px;
+    left: 1020px;
+    width: 191px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+    text-align:center;
+}
+
+#ChubanTxt{
+    position: absolute;
+    top:355px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#ChubanContent{
+    position: absolute;
+    top:350px;
+    left: 1020px;
+    width: 191px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+    text-align:center;
+}
+
+#JiageTxt{
+    position: absolute;
+    top:405px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#JiageContent{
+    position: absolute;
+    top:400px;
+    left: 1020px;
+    width: 191px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+    text-align:center;
+}
+
+#GouruTxt{
+    position: absolute;
+    top:455px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#GouruContent{
+    position: absolute;
+    top:450px;
+    left: 1020px;
+    width: 191px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+    text-align:center;
+}
+
+#ShuliangTxt{
+    position: absolute;
+    top:505px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#ShuliangContent{
+    position: absolute;
+    top:500px;
+    left: 1020px;
+    width: 191px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+    text-align:center;
+}
+
+#DidianTxt{
+    position: absolute;
+    top:555px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#DidianContent{
+    position: absolute;
+    top:550px;
+    left: 1020px;
+    width: 191px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+    text-align:center;
+}
+
+#FuzerenTxt{
+    position: absolute;
+    top:605px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#FuzerenContent{
+    position: absolute;
+    top:600px;
+    left: 1020px;
+    width: 191px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+    text-align:center;
+}
+
+#BumenTxt{
+    position: absolute;
+    top:655px;
+    left: 900px;
+    font-size: 20px;
+    color: #666666;
+}
+
+#BumenContent{
+    position: absolute;
+    top:650px;
+    left: 1020px;
+    width: 191px;
+    height: 36px;
+    font-size: 20px;
+    color: #666666;
+    text-align:center;
+}

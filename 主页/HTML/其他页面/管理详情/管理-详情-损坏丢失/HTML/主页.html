@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/icon图标0/iconfont.css">
+    <style type="text/css"></style>
+    <title>异常详情</title>
+</head>
+<body style="overflow: hidden;">
+    <script src="../JS/index.js"></script>
+    <!-- 左侧导航栏 -->
+    <div id="tocenter"> 
+      <div id="blue-line">
+        <div id="title">
+            <img id="main-logo" src="../image/Logo Flowtable.png " alt="">
+            <span id="main-word">云淄</span>
+        </div>
+      <ul id="min-box-0">
+        <span id="left-img">&#xe691;</span>
+        <!-- 为了添加location更改id -->
+          <span id="min-word">主页</span>
+      </ul>
+      <ul id="min-box" onclick="beopen4()">
+        <span id="left-img">&#xe641;</span>
+          <span id="min-word">管理</span>
+          <span id="be-more">&#xe637;</span>
+      </ul>
+            <ul id="two-box-4">
+              <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">档案编辑</li></a>
+                <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">管理审批</li></a>
+                  <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">黑名单</li></a>
+            </ul>
+      <ul id="min-box" onclick="beopen1()">
+        <span id="left-img">&#xe7a4;</span>
+          <span id="min-word">物品档案</span>
+          <span id="be-more-0">&#xe637;</span>
+      </ul>
+            <ul id="two-box-0">
+              <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">目录</li></a>
+              <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">查询</li></a>
+            </ul>
+      <ul id="min-box" onclick="beopen()" onfocus="tolook()">
+        <span id="left-img">&#xe6f9;</span>
+          <span id="min-word">物品交流</span>
+          <span id="be-more-1">&#xe637;</span>
+      </ul>
+          <ul id="two-box-1">
+            <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">预约</li></a>
+            <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">借用</li></a>
+            <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">归还</li></a>
+        </ul>
+             <!-- 修改部分(将id:be-more改成了be-more-3;min-box的盒子后加了onclick="beopen3()"，也可以直接把这部分粘贴过去替代原有内容) -->
+        <ul id="min-box" onclick="beopen3()">
+          <span id="left-img">&#xe613;</span>
+                 <span id="min-word">统计分析</span>
+                 <span id="be-more-3">&#xe637;</span>
+         </ul>
+            <!-- 修改部分 -->
+         <!-- 添加部分 -->
+             <ul id="two-box-3">
+              <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">统计分析</li></a>
+                <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">统计报表</li></a>
+             </ul>
+          <!-- 添加部分 -->
+         <ul id="min-box" onclick="beopen0()">
+          <span id="left-img">&#xe690;</span>
+                 <span id="min-word">资产维修</span>
+                 <span id="be-more-2">&#xe637;</span>
+         </ul> 
+             <ul id="two-box-2">
+              <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">维修申请</li></a>
+                <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><li id="two-word">报修处理</li></a>
+             </ul>
+             <a href="" style="display: inline-block;width: 188px;height: 20px;text-decoration: none;color: #999999;position: relative;"><ul id="min-box">
+          <span id="left-img">&#xea02;</span>
+                  <span id="min-word">帮助</span>
+         </ul></a>
+         <a href="../../登陆页面/HTML/yunzi.html"><img id="toback" src="../image/Log out.png" alt=""> </a>  
+    </div>
+            <!-- 上方导航栏 -->
+            <div id="white-line">
+                   <!-- 左侧各项 -->
+              <span id="menu">&#xe505;</span>
+              <div id="record"><span style="position: relative; top:35%">审批</span></div>
+               <!--搜索框 -->
+               <!-- <div id="search">
+                 <span>搜索 &nbsp;</span>
+                 <input id="search-box" type="text" value="例如：书名" onclick="back()" onblur="back0()"> 
+                  <button id="button-box" > <span id="search-button">&#xe825;</span></button>
+               </div> -->
+               <!-- 右边各项 -->
+                <div id="head-img"> <span style="position: relative; top:4px;">头像</span></div>
+                <a style="text-decoration: none;" href="./其他页面/通知/HTML/通知.html"><span id="alarm">&#xe605;</span></a>
+                <span id="set" onclick="beopen2()">&#xe51b;</span>
+                  <div id="set-up">
+                    <a href="../HTML/其他页面/重置密码/HTML/重置密码.html" style="text-decoration: none;"><ul id="min-cell" style="font-size:14px;border-radius:8px 8px 0 0;">重置密码</ul></a>
+                    <a href="../HTML/其他页面/注销/HTML/注销.html" style="text-decoration: none;"><ul id="min-cell" >注销</ul></a>
+                    <ul id="min-cell" style=" border-radius: 0 0 8px 8px;">更多</ul>
+                  </div>
+               
+
+            </div>
+            <div>
+              <img src="../image/团队.png" alt="" id="XiangqingImg">
+              <button class="TongguoBtn">通过</button>
+              <button class="BohuiBtn">驳回</button>
+                <input type="text" id="ShenqingrenBox" disabled="disabled" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;申请人&nbsp;: &nbsp;&nbsp;XX">
+                <input type="text" id="XuehaoBox" disabled="disabled" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;申请人学号&nbsp;: &nbsp;&nbsp;202000xxxx">
+                <input type="text" id="LianxiBox" disabled="disabled" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系方式&nbsp;: &nbsp;&nbsp;xxxxxxxxxxx">
+                <input type="text" id="LeixingBox" disabled="disabled" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;申请类型&nbsp;: &nbsp;&nbsp;损坏">
+                <input type="text" id="ShenqingTimeBox" disabled="disabled" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;申请时间&nbsp;: &nbsp;&nbsp;2021-2-22-11：5}">
+                <input type="text" id="WupinBox" disabled="disabled" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;物品&nbsp;: &nbsp;&nbsp;《习近平总书记重要讲话文章选编》">
+                <input type="text" id="BianhaoBox" disabled="disabled" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编号&nbsp;: &nbsp;&nbsp;100004">
+                <input type="text" id="JiageBox" disabled="disabled" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;物品价格&nbsp;: &nbsp;&nbsp;65">
+                <input type="text" id="DidianBox" disabled="disabled" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;存放地点&nbsp;: &nbsp;&nbsp;数港">
+            </div>
+
+    </div> 
+</body>
+</html>

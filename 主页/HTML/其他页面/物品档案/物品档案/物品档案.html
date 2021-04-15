@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>物品档案</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="iconfont.css">
+    <link rel="shortcut icon" href="../../../../favicon.ico" />
+</head>
+<body>
+    <script type="text/javascript" src="index.js"></script>
+    <div id="tocenter"> 
+        <div id="blue-line">
+            <div id="title">
+               <div id="main-logo" ><img src="../img/logo.png" alt=""></div>
+                <span id="main-word">云淄</span>
+            </div>
+        <a href="../../../主页.html">  <ul id="min-box">
+          <span id="left-img">&#xe691;</span>
+            <span id="min-word">主页</span>
+        </ul></a>
+          <ul id="min-box-1" onclick="beopen4()">
+            <span id="left-img">&#xe641;</span>
+              <span id="min-word">管理</span>
+              <span id="be-more-4">&#xe637;</span>
+          </ul>
+              <ul id="two-box-4">
+                <a href="../../档案编辑/管理-档案编辑-主页/HTML/主页.html"><li id="two-word">档案编辑</li></a>
+               <a href="../../管理审批/管理-审批-主页/HTML/主页.html"> <li id="two-word">管理审批</li></a>
+                <a href="../../黑名单/管理-黑名单-主页/HTML/主页.html"><li id="two-word">黑名单</li></a>
+          </ul>
+          <ul id="min-box-2" onclick="beopen1()">
+            <span id="left-img">&#xe7a4;</span>
+              <span id="min-word">物品档案</span>
+              <span id="be-more-0">&#xe637;</span>
+          </ul>
+                <ul id="two-box-0">
+                  <a href="../../物品档案/物品档案/物品档案.html"><li id="two-word">目录</li></a>
+               <a href="../../物品档案/书籍简介/书籍简介.html"> <li id="two-word">查询</li></a>
+       </ul>
+          <ul id="min-box-3" onclick="beopen()" onfocus="tolook()">
+            <span id="left-img">&#xe6f9;</span>
+              <span id="min-word">物品交流</span>
+              <span id="be-more-1">&#xe637;</span>
+          </ul>
+                <ul id="two-box-1">
+                     <a href="../../物品交流/物品交流-预约/HTML/预约.html"><li id="two-word">预约</li></a>
+                     <a href="../../物品交流/物品交流-借阅/HTML/借阅.html"><li id="two-word">借用</li></a>
+                    <a href="../../物品交流/物品交流-归还/HTML/归还.html"> <li id="two-word">归还</li></a>
+                </ul>
+                 <!-- 修改部分(将id:be-more改成了be-more-3;min-box的盒子后加了onclick="beopen3()"，也可以直接把这部分粘贴过去替代原有内容) -->
+            <ul id="min-box-4" onclick="beopen3()">
+              <span id="left-img">&#xe613;</span>
+                     <span id="min-word">统计分析</span>
+                     <span id="be-more-3">&#xe637;</span>
+             </ul>
+                <!-- 修改部分 -->
+             <!-- 添加部分 -->
+                 <ul id="two-box-3">
+                 <a href="../../统计分析/统计分析1/HTML/统计分析1.html"><li id="two-word">统计分析</li></a>
+                 <a href="../../统计分析/统计报表/统计报表.html"><li id="two-word">统计报表</li></a>
+                 </ul>
+              <!-- 添加部分 -->
+             <ul id="min-box-5" onclick="beopen0()">
+              <span id="left-img">&#xe690;</span>
+                     <span id="min-word">资产维修</span>
+                     <span id="be-more-2">&#xe637;</span>
+             </ul> 
+                 <ul id="two-box-2">
+                     <a href="../../资产维修/维修申请/维修申请.html"><li id="two-word">维修申请</li></a>
+                     <a href="../../资产维修/报修处理/报修处理.html"><li id="two-word">报修处理</li></a>
+                 </ul>
+                    <a href="../../帮助/帮助.html">    <ul id="min-box-6">
+                      <span id="left-img">&#xea02;</span>
+                              <span id="min-word">帮助</span>
+                     </ul></a>
+                     <a href="javascript:history.back(-1)"> </a>
+        </div>
+        <!-- 上方导航栏 -->
+      <!-- 上方导航栏 -->
+      <div id="white-line">
+        <!-- 右边各项 -->
+        <span class="iconfont1">&#xe61d;</span>
+     <button class="sousuo"><span>&emsp; 目录 &emsp; </span></button> 
+   
+          <!-- 跳转到个人中心 -->
+       <div id="head-img"> <a href=""><span style="position: relative; top:4px;">头像</span></a></div>
+       <!-- 跳转到通知 -->
+       <a href="  "><span id="alarm">&#xe605; </span></a>
+       <!-- 跳转到设置 -->
+       <a href="  "><span id="set">&#xe51b;</span></a>
+      
+
+ <div class="right">
+
+     <div class="box">
+           <!-- 跳转到物品档案中的目录 -->
+         <a href="  "><div class="case">
+             <div class="four">
+                 
+             <span class="iconfont3">&#xe6cd;</span>
+             <div class="names"> books</div></div>
+         </div></a>
+         <a href="  "><div class="case">
+             <div class="four">
+             <span class="iconfont3">&#xe609;</span>
+             <div class="names">furniture</div></div>
+         </div></a>
+          
+         <a href=" "><div class="case">
+             <div class="four">
+             <span class="iconfont3">&#xe7bb;</span>
+             <div class="names">computer</div></div>
+         </div></a>
+         <a href=" "><div class="case">
+             <div class="four">
+             <span class="iconfont3">&#xe666;</span>
+             <div class="names">others</div></div>
+         </div></a>
+     </div>
+<!-- 修改内容 -->
+     <div class="form">
+         <div class="text">The recent query</div>
+         <table class="tables" cellspacing = "0"      bordercolor="#F0F0F0">
+
+             <tr>
+                 <th class="th"> &nbsp;project</th>
+                 <th class="th"> Date</th>
+             </tr>
+
+             <tr class="td-one">
+                <td>《运动生理学》</td>
+                <td>2020-12-17</td>
+             </tr>
+             <tr class="td-two">
+                 <td>《党课》</td>
+                 <td>2020-12-17</td>
+              </tr>                <tr class="td-one">
+                 <td>《政治学概论》</td>
+                 <td>2020-12-17</td>
+              </tr>                <tr class="td-two">
+                 <td>《中国古代测算数术》</td>
+                 <td>2020-12-17</td>
+              </tr>
+  
+
+         </table>
+
+
+         <!-- <span class="iconfont">&#xe60c;</span> -->
+     </div>
+
+
+         <!-- <span class="iconfont">&#xe60c;</span> -->
+     </div>
+</body>
+</html>

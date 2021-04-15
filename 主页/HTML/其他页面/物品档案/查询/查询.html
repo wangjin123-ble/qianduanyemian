@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="iconfont.css">
+    <link rel="shortcut icon" href="../../../../favicon.ico" />
+</head>
+<body>
+
+<!-- 左侧导航栏 -->
+ 
+<!-- <div id="tocenter">  -->
+      <!-- copy点 -->
+      <div id="blue-line">
+        <div id="title">
+           <div id="main-logo" > <img src="../img/logo.png" alt=""></div>
+            <span id="main-word"> &nbsp; 云淄</span>
+        </div>
+    <a href="../../../主页.html">  <ul id="min-box">
+      <span id="left-img">&#xe691;</span>
+        <span id="min-word">主页</span>
+    </ul></a>
+      <ul id="min-box-1" onclick="beopen4()">
+        <span id="left-img">&#xe641;</span>
+          <span id="min-word">管理</span>
+          <span id="be-more-4">&#xe637;</span>
+      </ul>
+          <ul id="two-box-4">
+            <a href=""><li id="two-word">档案编辑</li></a>
+           <a href=""> <li id="two-word">管理审批</li></a>
+            <a href=""><li id="two-word">黑名单</li></a>
+      </ul>
+      <ul id="min-box-2" onclick="beopen1()">
+        <span id="left-img">&#xe7a4;</span>
+          <span id="min-word">物品档案</span>
+          <span id="be-more-0">&#xe637;</span>
+      </ul>
+            <ul id="two-box-0">
+              <a href=""><li id="two-word">目录</li></a>
+           <a href="./其他页面/物品档案/书籍简介/书籍简介.html"> <li id="two-word">查询</li></a>
+   </ul>
+      <ul id="min-box-3" onclick="beopen()" onfocus="tolook()">
+        <span id="left-img">&#xe6f9;</span>
+          <span id="min-word">物品交流</span>
+          <span id="be-more-1">&#xe637;</span>
+      </ul>
+            <ul id="two-box-1">
+                 <a href=""><li id="two-word">预约</li></a>
+                 <a href=""><li id="two-word">借用</li></a>
+                <a href=""> <li id="two-word">归还</li></a>
+            </ul>
+             <!-- 修改部分(将id:be-more改成了be-more-3;min-box的盒子后加了onclick="beopen3()"，也可以直接把这部分粘贴过去替代原有内容) -->
+        <ul id="min-box-4" onclick="beopen3()">
+          <span id="left-img">&#xe613;</span>
+                 <span id="min-word">统计分析</span>
+                 <span id="be-more-3">&#xe637;</span>
+         </ul>
+            <!-- 修改部分 -->
+         <!-- 添加部分 -->
+             <ul id="two-box-3">
+             <a href=""><li id="two-word">统计分析</li></a>
+             <a href=""><li id="two-word">统计报表</li></a>
+             </ul>
+          <!-- 添加部分 -->
+         <ul id="min-box-5" onclick="beopen0()">
+          <span id="left-img">&#xe690;</span>
+                 <span id="min-word">资产维修</span>
+                 <span id="be-more-2">&#xe637;</span>
+         </ul> 
+             <ul id="two-box-2">
+                 <a href=""><li id="two-word">维修申请</li></a>
+                 <a href=""><li id="two-word">报修处理</li></a>
+             </ul>
+                <a href="./其他页面/帮助/帮助.html">    <ul id="min-box-6">
+                  <span id="left-img">&#xea02;</span>
+                          <span id="min-word">帮助</span>
+                 </ul></a>
+                 <a href="javascript:history.back(-1)"><img id="toback" src="../img/Log out.png" alt=""> </a>
+    </div>
+
+    <!-- 上方导航栏 -->
+    <div id="white-line">
+        <span class="iconfont1">&#xe61d;</span>
+        <button class="sousuo"><span>&emsp; 搜索 &emsp; </span></button> 
+      
+       
+       <!-- 右边各项 -->
+        <div id="head-img"> <span style="position: relative; top:4px;">头像</span></div>
+        <span id="alarm">&#xe605;</span>
+        <span id="set">&#xe51b;</span>
+       
+
+    </div>
+    <!-- 中间白块或图标 -->
+    <div id="middle" style="transform: scale(0.9);">
+     <!--搜索框 -->
+        <div id="search">
+         <!-- <span>搜索 &nbsp;</span> -->
+         <input id="search-box" type="text"  placeholder="  请输入物品名称/编号"  style="font-size:24px;"> 
+          <button id="button-box"> <span id="search-button">&#xe825;</span></button>
+        </div>
+    </div>
+    <!-- 下方主要板块 -->
+    <div id="main-block" style="transform: scale(0.9);">
+        <div class="exe">
+            <div class="titlee">热门搜索</div>
+            <div class="one"><a href=""> 运动解剖学 </a> </div>
+          
+            <div class="two"><a href=""> 习近平总书记重要讲话文章选编</a></div>
+             <div class="three"><a href=""> 习近平总书记关于中国特色社会主义思想学习纲要</a></div> 
+            <div class="four"><a href=""> 中国古代测算数术</a></div> 
+            <div class="five"><a href=""> 党课</a></div>
+           </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>

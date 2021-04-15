@@ -1,0 +1,107 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "24660",
+      "name": "air-play",
+      "font_class": "airplay",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "3177721",
+      "name": "统计分析",
+      "font_class": "tongjifenxi",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "3400875",
+      "name": "交互管理",
+      "font_class": "jiaohuguanli",
+      "unicode": "e6f9",
+      "unicode_decimal": 59129
+    },
+    {
+      "icon_id": "3433220",
+      "name": "铃铛",
+      "font_class": "lingdang",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "3462514",
+      "name": "菜单",
+      "font_class": "caidan-copy",
+      "unicode": "e505",
+      "unicode_decimal": 58629
+    },
+    {
+      "icon_id": "8782327",
+      "name": "layout",
+      "font_class": "layout",
+      "unicode": "e7a4",
+      "unicode_decimal": 59300
+    },
+    {
+      "icon_id": "8917039",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e825",
+      "unicode_decimal": 59429
+    },
+    {
+      "icon_id": "14704334",
+      "name": "帮 助",
+      "font_class": "bangzhu",
+      "unicode": "ea02",
+      "unicode_decimal": 59906
+    },
+    {
+      "icon_id": "16737098",
+      "name": "设 置",
+      "font_class": "shezhi",
+      "unicode": "e51b",
+      "unicode_decimal": 58651
+    },
+    {
+      "icon_id": "17522901",
+      "name": "书本",
+      "font_class": "shuben",
+      "unicode": "ebb9",
+      "unicode_decimal": 60345
+    },
+    {
+      "icon_id": "18223030",
+      "name": "资产维修",
+      "font_class": "zichanweixiu",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    },
+    {
+      "icon_id": "18427009",
+      "name": "加号",
+      "font_class": "plus",
+      "unicode": "e503",
+      "unicode_decimal": 58627
+    },
+    {
+      "icon_id": "18545239",
+      "name": "主页",
+      "font_class": "Iconoutlinehome",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
+      "icon_id": "19858874",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+body,div,a,p,b,li,ol,ul,input,form,h1,h2,h3,h4,h5,textarea{
+	margin:0;
+	padding:0;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-seri;
+}
+ol,ul,li
+{list-style-type:none; 
+	cursor:default;
+}
+img{
+	display:block;
+	border:none;
+}
+
+#blue-line a{
+	color: #fff;
+	text-decoration: none; 
+}
+ 
+li:before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	border-radius: 50%;
+	background: #6280F1;
+	vertical-align: middle;
+	margin-right: 34px;
+	}
+body{
+	background-color: #F3F5F8;
+}
+ 

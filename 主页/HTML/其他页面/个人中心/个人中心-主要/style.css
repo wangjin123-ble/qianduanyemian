@@ -1,0 +1,245 @@
+/*top的样式*/
+
+
+
+.top-img1{
+    margin-left:  229px;
+    padding-top: 8px;
+}
+.top-span1{
+    margin-left: 53px;
+    margin-top: 26px;
+    color: #2F4DBF;
+    font-size: 20px;
+}
+.top-a1{
+    font-size: 17px;
+    color: #333333;
+    margin-left: 408px;
+    margin-top: -36px;
+}
+.top-a2{
+    font-size: 18px;
+    margin-left: 551px;
+    margin-top: -23px;
+}
+
+.top-input{
+    margin-left: 783px;
+    margin-top: -47px;
+    border-left: solid 0px;
+}
+.top-span1{
+    width: 60px;
+    height: 46px;
+    border-radius: 10px 10px;
+    color: #000;
+}
+
+.top-span1{
+    margin-left: 725px;
+    margin-top: -37px;
+}
+.top-button1{
+    margin-left: 1416px;
+    margin-top: -44px;
+}
+.top-button2{
+    margin-left: 1473px;
+    margin-top: -30px;
+}
+.body3-input{
+    margin-left: 50px;
+    margin-top:  -120px;
+    position: relative;
+}
+
+
+
+
+
+
+/*body2-box的样式*/
+.body2-box{
+    width: 1536px;
+    height: 43px;
+    background-color: #F3F5F8;
+    position: relative;
+    margin-left: -155px;
+    margin-top: -45px;
+}
+.body2-input{
+    margin-top: -30px;
+}
+/*body3-box1的样式*/
+.body3-box1{
+    width: 760px;
+    height: 110px;
+    background-color: #fff;
+    margin-left: 300px;
+    margin-top: -110px;
+}
+.body3-box1-span1{
+    font-size: 26px;
+    margin-left: 27px;
+}
+.body3-box1-span2{
+    font-size: 24px;
+    color:#333;
+    margin-left: 139px;
+    margin-top: -34px;
+}
+
+.body3-box2{
+    width: 760px;
+    height: 110px;
+    background-color: #fff;
+    margin-left: 300px;
+    margin-top: px;
+}
+.body3-box2-span1{
+    font-size: 26px;
+    margin-left: 27px;
+}
+.body3-box2-span2{
+    font-size: 24px;
+    color:#333;
+    margin-left: 139px;
+    margin-top: -34px;
+}
+
+.body3-box3{
+    width: 760px;
+    height: 110px;
+    background-color: #fff;
+    margin-left: 300px;
+    margin-top: px;
+}
+.body3-box3-span1{
+    font-size: 26px;
+    margin-left: 27px;
+}
+.body3-box3-span2{
+    font-size: 24px;
+    color:#333;
+    margin-left: 139px;
+    margin-top: -34px;
+}
+
+.body3-box4{
+    width: 760px;
+    height: 110px;
+    background-color: #fff;
+    margin-left: 300px;
+    margin-top: px;
+}
+.body3-box4-span1{
+    font-size: 26px;
+    margin-left: 27px;
+}
+.body3-box4-span2{
+    font-size: 24px;
+    color:#333;
+    margin-left: 139px;
+    margin-top: -34px;
+}
+
+.body3-box5{
+    width: 760px;
+    height: 110px;
+    background-color: #fff;
+    margin-left: 300px;
+    margin-top: px;
+}
+.body3-box5-span1{
+    font-size: 26px;
+    margin-left: 27px;
+}
+.body3-box5-span2{
+    font-size: 24px;
+    color:#333;
+    margin-left: 139px;
+    margin-top: -34px;
+}
+
+.body3-box6{
+    width: 760px;
+    height: 110px;
+    background-color: #fff;
+    margin-left: 300px;
+    margin-top: px;
+}
+.body3-box6-span1{
+    font-size: 26px;
+    margin-left: 27px;
+}
+.body3-box6-span2{
+    font-size: 24px;
+    color:#333;
+    margin-left: 195px;
+    margin-top: -34px;
+}
+
+.body3-box7{
+    width: 760px;
+    height: 110px;
+    background-color: #fff;
+    margin-left: 300px;
+    margin-top: px;
+}
+.body3-box7-span1{
+    font-size: 26px;
+    margin-left: 27px;
+}
+.body3-box7-span2{
+    font-size: 24px;
+    color:#333;
+    margin-left: 195px;
+    margin-top: -34px;
+}
+
+/* 搜索框 */
+#search{
+    position: relative;
+    top:-40px;
+    left:800px;
+    width: 350px;
+    height:25px;
+    border-radius: 7px 7px 7px 7px;
+    border :2px solid #C7D8DE;
+    padding: 5px;
+    font-size: 15px;
+    z-index: 1000;
+}
+#search-box{
+    position: relative;
+    top:-1px;
+    width: 230px;
+    height: 28px;
+    color:#999999;
+    border: none;
+    outline: none;
+}
+    /* 搜索按钮 */
+    #search-button{
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        color: #89979C;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    #button-box{
+        position: relative;
+        left:50px;
+        background-color:transparent;
+        border: none;
+        outline: none;
+        transition: 0.8s;
+        width: 14px;
+        height: 14px;
+    }
+    #button-box:hover{
+       transform: scale(0.8);
+    }
+    

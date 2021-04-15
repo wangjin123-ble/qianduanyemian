@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>个人中心</title>
+        <link rel="stylesheet" href="main2-style.css">
+        <link rel="stylesheet" href="main2-commen.css">
+        <!-- <link rel="stylesheet" href="main2.js"> -->
+        <link rel="stylesheet" href="iconfont.css">
+        <!-- <link rel="stylesheet" href="jquery-3.5.1.min.js"> -->
+        <script type="text/javascript"></script>
+        <!-- <script src="../JS/index.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div class="box">
+        <div id="top">
+            <div class="top-img1"><img src="./img./云淄logo.png" width="65px"  height="65px" ></div>
+           <div class="top-a1"><a href="#">个人中心</a></div>
+           <div class="top-a2"><a href="#">返回主页</a></div>
+           <div id="search">
+            <span>搜索 &nbsp;</span>
+            <input id="search-box" type="text" value="例如：书名" onclick="back()" onblur="back0()" v-model="query" @keyup.enter="searchInformation"> 
+             <button id="button-box"style=" background:url(./img./2.png);"></button>
+          </div>
+        </div>
+        <div class="body1">
+            <div class="body2">
+                <div class="body2-input">
+                    <div class="body2-box"></div>
+                </div>
+                </div>
+            </div>
+            <div id="body3">
+                <div class="body3-input"><img v-bind:src="headPortrait" type="button" style="width: 236px;height: 236px;border-radius: 116px 116px;background:#fff"></div>
+                   
+                        <div class="button">
+                            <a href="../个人中心1/个人中心1.html"><button value="完成"id="button1" form="register"  form="register"><span class="iconfont">&#xe69c;</span>编辑</button></a>
+
+                        </div>
+                        <div id="app">
+                        <dd>
+                        <!-- 头像信息 -->
+                        <div class="headInformation2" style="font-size: 26px;">头像：</div>
+                        <div class="headInformation1"><img src="" alt="" style="background-color: rosybrown; width: 60px;height: 60px; border-radius: 30px 30px;"></div>
+                        <div class="boxline"></div>
+                        </dd>
+                        <dd>
+                         <!-- 方向信息 -->
+                         <div class="direction" style="font-size: 26px;">方向：</div>
+                         <div class="directionSearch" style="font-size: 24px;" ><span>{{direction}}</span></div>
+                         <!-- {{message.direction}} -->
+                         <div class="boxline2"></div>
+                        </dd>
+                        <dd>
+                        <!-- 姓名信息 -->
+                        <div class="name" style="font-size: 26px;">姓名：</div>
+                        <div class="nameInformation"style="font-size: 24px;"><span>{{name}}</span></div>
+                        <!-- {{message.name}} -->
+                        <div class="boxline3"></div>
+                        </dd>
+                        <dd>
+                            <!--期数信息 -->
+                        <div class="periods"style="font-size: 26px;">期数：</div>
+                        <div class="periodsSearch"><span style="font-size: 24px;">{{period_number}}</span></div>
+                        <!-- {{message.period_number}} -->
+                        <div class="boxline4"></div>
+                        </dd>
+                       
+                        <dd>
+                             <!-- 性别信息 -->
+                        <div class="gender"style="font-size: 26px;">性别：</div>
+                        <div class="genderSearch" style="font-size: 24px;">
+                            <span>{{sex}}</span>
+                            <!-- {{message.sex}} -->
+                        </div>
+                        <div class="boxline5"></div>
+                        </dd>
+                       <dd>
+                            <!-- 电话信息 -->
+                        <div class="phone" style="font-size: 26px;">联系电话：</div>
+                        <div class="phoneInformation" style="font-size: 24px;"><span> {{tel}}</span></div>
+                        
+                        <div class="boxline6"></div>
+                       </dd>
+                        <dd>
+                        <!-- 学号信息 -->
+                        <div class="studentNumber" style="font-size: 26px;">学号：</div>
+                        <div class="studentNumberInformation" style="font-size: 24px;"><span>{{student_number}} </span></div>
+                        <!-- {{message.student_number}} -->
+                        <div class="boxline7"></div>
+                        </dd>
+                        <dd>
+                            <!-- 邮件信息 -->
+                        <div class="email" style="font-size: 26px;">电子邮件：</div>
+                        <div class="emailInformation" style="font-size: 24px;"><span>{{mail}}</span></div>
+                        <!-- {{message.mail}} -->
+                        <div class="boxline8"></div>
+                        </dd>
+                        </div>
+                        </dl>
+                        <script>
+                var app=new Vue({
+                  el:"#app",
+                  data:{ 
+                     sex:"",
+                     tel:"",
+                     student_number:"",
+                     period_number:"",
+                      name:"",
+                      mail:"",
+                      direction:"q",  
+                  },
+                  mounted:function(){
+                      this.loading();
+                  },
+                  methods:{
+                       loading:function()
+                              {      
+                                  console.log(this.direction);         
+                                var that=this;
+                                 axios.get("http://java2home.natapp1.cc/Home/showinf").then
+                                (function(response) {
+                                //   console.log(response.data);
+                                //   that.sex=response.data.sex;
+                                console.log(response.data.direction);
+                                  that.direction=response.data.direction;
+                                  that.sex=response.data.sex;
+                                  that.name=response.data.name;
+                                  that.mail=response.data.mail;
+                                  that.period_number=response.data.period_number;
+                                  that.student_number=response.data.student_number;
+                                  that. tel=response.data.tel;
+
+                                //   console.log(that.message.direction);
+                                
+                                },function(err){
+                                  console.log(err);
+
+                                })
+                              }
+                  }
+                })
+              </script>
+            </div>
+        </div>
+    </body>
+</html>
+

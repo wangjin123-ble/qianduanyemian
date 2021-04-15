@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="iconfont.css">
+    <link rel="shortcut icon" href="../../../../favicon.ico" />
+    <style type="text/css"></style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>维修申请</title>
+</head>
+<body style="overflow: hidden;"> 
+   
+    <script src="index.js"></script>
+    <!-- 左侧导航栏 -->
+    <div id="tocenter"> 
+      <div id="blue-line">
+        <div id="title">
+           <div id="main-logo" > <img src="../image/logo.png" alt=""></div>
+            <span id="main-word">云淄</span>
+        </div>
+    <a href="../../../主页.html">  <ul id="min-box">
+      <span id="left-img">&#xe691;</span>
+        <span id="min-word">主页</span>
+    </ul></a>
+      <ul id="min-box-1" onclick="beopen4()">
+        <span id="left-img">&#xe641;</span>
+          <span id="min-word">管理</span>
+          <span id="be-more-4">&#xe637;</span>
+      </ul>
+          <ul id="two-box-4">
+            <a href="../../档案编辑/管理-档案编辑-主页/HTML/主页.html"><li id="two-word">档案编辑</li></a>
+           <a href="../../管理审批/管理-审批-主页/HTML/主页.html"> <li id="two-word">管理审批</li></a>
+            <a href="../../黑名单/管理-黑名单-主页/HTML/主页.html"><li id="two-word">黑名单</li></a>
+      </ul>
+      <ul id="min-box-2" onclick="beopen1()">
+        <span id="left-img">&#xe7a4;</span>
+          <span id="min-word">物品档案</span>
+          <span id="be-more-0">&#xe637;</span>
+      </ul>
+            <ul id="two-box-0">
+              <a href="../../物品档案/物品档案/物品档案.html"><li id="two-word">目录</li></a>
+           <a href="../../物品档案/书籍简介/书籍简介.html"> <li id="two-word">查询</li></a>
+   </ul>
+      <ul id="min-box-3" onclick="beopen()" onfocus="tolook()">
+        <span id="left-img">&#xe6f9;</span>
+          <span id="min-word">物品交流</span>
+          <span id="be-more-1">&#xe637;</span>
+      </ul>
+            <ul id="two-box-1">
+                 <a href="../../物品交流/物品交流-预约/HTML/预约.html"><li id="two-word">预约</li></a>
+                 <a href="../../物品交流/物品交流-借阅/HTML/借阅.html"><li id="two-word">借用</li></a>
+                <a href="../../物品交流/物品交流-归还/HTML/归还.html"> <li id="two-word">归还</li></a>
+            </ul>
+             <!-- 修改部分(将id:be-more改成了be-more-3;min-box的盒子后加了onclick="beopen3()"，也可以直接把这部分粘贴过去替代原有内容) -->
+        <ul id="min-box-4" onclick="beopen3()">
+          <span id="left-img">&#xe613;</span>
+                 <span id="min-word">统计分析</span>
+                 <span id="be-more-3">&#xe637;</span>
+         </ul>
+            <!-- 修改部分 -->
+         <!-- 添加部分 -->
+             <ul id="two-box-3">
+             <a href="../../统计分析/统计分析1/HTML/统计分析1.html"><li id="two-word">统计分析</li></a>
+             <a href="../../统计分析/统计报表/统计报表.html"><li id="two-word">统计报表</li></a>
+             </ul>
+          <!-- 添加部分 -->
+         <ul id="min-box-5" onclick="beopen0()">
+          <span id="left-img">&#xe690;</span>
+                 <span id="min-word">资产维修</span>
+                 <span id="be-more-2">&#xe637;</span>
+         </ul> 
+             <ul id="two-box-2">
+                 <a href="../维修申请/维修申请.html"><li id="two-word">维修申请</li></a>
+                 <a href="../报修处理/报修处理.html"><li id="two-word">报修处理</li></a>
+             </ul>
+                <a href="./../../帮助/帮助.html">    <ul id="min-box-6">
+                  <span id="left-img">&#xea02;</span>
+                          <span id="min-word">帮助</span>
+                 </ul></a>
+         <a href="javascript:history.back(-1)"><img id="toback" src="../image/Log out.png" alt=""> </a>  
+    </div>
+
+            <!-- 上方导航栏 -->
+            <div id="white-line">
+  
+               <!--搜索框 -->
+               <div id="search">
+                 <span>搜索 &nbsp;</span>
+                 <input id="search-box" type="text" value="例如：书名" onclick="back()" onblur="back0()"> 
+                  <button id="button-box" > <span id="search-button">&#xe825;</span></button>
+               </div>
+
+              <div id="blue">维修申请</div>
+            <!-- 下方主要板块 -->
+            <div id="white-box" >
+
+
+ 
+            <div id="app" @submit.prevent="submitFrom()">
+               <form >
+              <div id="main-input">
+                <div><span id="edit-2" style="font-size: 25px; font-weight: 600;">报修人&ensp;&ensp;</span> 
+                   <input name="name" v-model="name" id="edit"  type="text"><span id="font-size"><span style="color:red;"> * </span>请输入真实姓名</span></div>
+              </div>
+              <div id="main-input">
+                      <div><span style="font-size: 25px; font-weight: 600;"> 物品名称</span>&ensp;&ensp;<input name="book" v-model="book" id="edit"  type="text"> <span id="font-size"><span style="color:red;"> * </span>请输入物品名称</span></div>
+              </div>
+            <div id="main-input">
+              <div><span style="font-size: 25px; font-weight: 600;">编号&emsp;&emsp;</span> &emsp;&emsp;&ensp;&ensp;<input name="number" v-model="number" id="edit-0"  type="text" value=""><span id="font-size"><span style="color:red;"> * </span>请输入物品编号</span></div>
+            </div>
+            <div id="main-input-1">
+               <h4><span id="reason"> 报修原因 </span> &ensp;&ensp;<textarea name="reason" v-model="reason" id="edit-1"cols="50" rows="10">* 请输入报修原因（不少于10字）</textarea></h4>
+            </div>
+         
+            <button type="submit" id="beout" onclick="main()">提交</button>
+            </form>
+            </div>
+            <!-- 提示框 -->
+
+
+            <div id="alter" onclick="main1()">
+               <div id="succee"> 提交成功</div> 
+               <div id="check">
+                  <div id="check-1"></div>
+                  <div id="check-2"></div> 
+               </div>
+               <div id="p">我们会尽快安排维修人员为您维修</div>
+            </div>
+               <div id="alter2"  onclick="main2()">
+                <h4 id="succee2">提交失败</h4>
+                <div id="check">
+                   <div id="check-3">×</div>
+                </div>
+                <div id="p">您的报修原因不满十字，请您详细描述</div>
+             </div> 
+                
+   
+           </div>
+
+    </div> 
+    <script>
+      var app = new Vue({
+        el: "#app",
+          data:{   
+            name:"",
+            book:"",
+            number:"",
+            reason:"*请输入报修原因（不少于10字）"
+              },
+        methods:
+        {
+             submitFrom()
+            {  var that=this;
+              var params = new URLSearchParams();
+              params.append('key', 'value');
+               axios.post("http://javahome1.natapp1.cc/Empproject/controller",{name:this.name+'',book:this.book+'',number:this.number+'',reason:this.reason+''},{headers: {'Content-Type':'application/x-www-form-urlencoded'}}).then
+              (function(response) {
+                console.log(response);
+           
+              },function(err){
+                
+                console.log(err);
+              })
+            }
+        }
+    })
+  </script>
+</body>
+</html>

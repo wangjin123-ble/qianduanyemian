@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>个人中心</title>
+        <link rel="stylesheet" href="main1.css">
+        <link rel="stylesheet" href="common1.css">
+        <link rel="stylesheet" href="main1.js">
+        <link rel="stylesheet" href="iconfont.css">
+        <style type="text/css">
+
+        </style>
+        </style>
+        <script type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+        <link rel="shortcut icon" href="../../../../favicon.ico" />
+    </head>
+    <body>
+        <div class="box">
+        <div id="top">
+            <div class="top-img1"><img src="./img./云淄logo.png" width="65px"  height="65px" ></div>
+           <div class="top-a1"><a href="../个人中心-主要/个人中心-主要.html">个人中心</a></div>
+           <div class="top-a2"><a href="../../../主页.html">返回主页</a></div>
+           <div id="search">
+            <span>搜索 &nbsp;</span>
+            <input id="search-box" type="text" value="例如：书名" onclick="back()" onblur="back0()" v-model="query" @keyup.enter="searchInformation"> 
+             <button id="button-box"style=" background:url(./img./2.png);"></button>
+          </div>
+        </div>
+        <div class="body1">
+            <div class="body2">
+                <div class="body2-input">
+                    <div class="body2-box"></div>
+                </div>
+                </div>
+            </div>
+            <div id="body3">
+               
+                  
+                    <form  method="post" target="_self"  >
+                        <div id="userData">
+                        <div class="button"><button id="button1" type="submit" value="完成"  form="register"><a href="../../../主页.html" style="color: #fff;"><span class="iconfont" style="color: #fff;">&#xe69c;</span>完成</button></a></div>
+                        <!-- 头像信息 -->
+                        <div class="headInformation2" style="font-size: 26px;">头像：</div>
+                        <div class="headInformation1">
+                            <img id="img" src="${image_path}">
+                        </div>
+                        <div class="profilePicture">
+                            <input type="file"class="file" id="fileImg" style="width: 100px; height: 25px;"></input>
+                        <label for="fileImg" onchange="upImg">上传</label>
+                    </div> 
+                        <div class="boxline"></div>
+                        <!-- <script type="text/javascript">
+                            let input = document.getElementById('fileImg')
+                            input.onchange=function(e){
+                                let fileObj = e.target.files[0]
+                                let reader = new FileReader()
+                                reader.onload = function(){
+                                    let imgurl = reader.result
+                                    console.log('wenjian', reader.result)
+                                    document.getElementById('img').src = imgurl
+                                }
+                                reader.readAsDataURL(fileObj)
+                            }
+                        </script> -->
+                        <!-- 方向信息 -->
+                        <div class="direction" style="font-size: 26px;">方向：</div>
+                        <div class="directionSearch">
+                            <select name="directionSearchInformation" id="selectid" style="width: 180px;height: 40px;font-size: 18px;" form="register" onchange="getValue()">
+                                <option value="设计">设计</option>
+                                <option value="秘书处">秘书处</option>
+                                <option value="cpu">cpu</option>
+                                <option value="前端">前端</option>
+                                <option value="Java">Java</option>
+                                <option value="Pythen">Pythen</option>
+                                <option value="人工智能">人工智能</option>
+                                <option value="c/c++">c/c++</option>
+                                <option value="操作系统">操作系统</option>
+                                <option value="操作系统">JS</option>
+                            </select>
+                            <div class="boxline2"></div>
+                            <!-- 姓名信息 -->
+                            <div class="name"style="font-size: 26px;">姓名：</div>
+                            <div class="nameInformation"><input type="text" style="width: 180px;height: 35px;font-size: 18px;" required form="register" v-model="namesomething1"></div>
+                            <div class="boxline3"></div>
+                            <div class="nameInformation2" style="color: red;">*</div>
+                            <div class="nameInformation3">请输入真实姓名</div>
+                        </div>
+                        <!--期数信息 -->
+                        <div class="periods"style="font-size: 26px;">期数：</div>
+                        <div class="periodsSearch">
+                            <select name="periodsInformations" id="selectid2" style="width: 180px;height: 40px;font-size: 18px;" form="register" onchange="getValue2()">
+                                <option value="一">一</option>
+                                <option value="二">二</option>
+                                <option value="三">三</option>
+                                <option value="四">四</option>
+                                <option value="五">五</option>
+                            </select>
+                        </div>
+                        <div class="boxline4"></div>
+                        <!-- 性别信息 -->
+                        <div class="gender"style="font-size: 26px;">性别：</div>
+                        <div class="genderSearch" style="size: 10px;">
+                            <div class="radio1"><input type="radio" name="a" form="register"></div>
+                            <div class="girl" style="font-size: 23px;">女</div>
+                            <div class="radio2"><input type="radio" name="a" form="register"></div>
+                            <div class="boy" style="font-size: 23px;">男</div>
+                        </div>
+                        <div class="boxline5"></div>
+                        <!-- 电话信息 -->
+                        <div class="phone" style="font-size: 26px;">联系电话：</div>
+                        <div class="phoneInformation"><input type="text" style="width: 180px;height: 35px;font-size: 18px;" v-model="phone1"></div>
+                        <div class="boxline6"></div>
+                        <!-- 学号信息 -->
+                        <div class="studentNumber" style="font-size: 26px;">学号：</div>
+                        <div class="studentNumberInformation"><input type="text" style="width: 180px;height: 35px;font-size: 18px;" required v-model="studentNumber1"></div>
+                        <div class="boxline7"></div>
+                        <div class="studentNumberInformation2" style="color: red;">*</div>
+                        <div class="studentNumberInformation3">请输入正确格式</div>
+                        <!-- 邮件信息 -->
+                        <div class="email" style="font-size: 26px;">电子邮件：</div>
+                        <div class="emailInformation"><input type="email" style="width: 180px;height: 35px;font-size: 18px;" v-model="email1"></div>
+                        <div class="boxline8"></div> -->
+                        <!-- <div class="body3-input"><img v-bind:src="headPortrait" type="button" style="width: 236px;height: 236px;border-radius: 116px 116px;background:#fff"></div> -->
+                        </div>
+                    </form>
+                  
+                    <script>
+                        var app = new Vue({
+                          el: "#userData",
+                            data:{   
+                                email1:"",
+                                namesomething1:'',
+                                phone1:'',
+                                studentNumber1:'',
+                                img_Url:'',
+                                headPortrait:'',
+                                },
+                          methods:
+                          {
+                            //    submitFrom()
+                            //   {    
+                            //      this.token=localStorage.token;
+                            //      console.log(this.token);
+                            //     var that=this;
+                            //     var params = new URLSearchParams();
+                            //     params.append('key', 'value');
+                            //      axios.post("http://java2home.natapp1.cc/Home/cps",
+                            //      {mail:this.mail+'',password:this.password+'',new_password:this.new_password+'',new_password_again:this.password+'',token:this.token},
+                            //      {headers: {"token":localStorage.token}}).then
+                            //     (function(response) {
+                            //       console.log(response);
+                            //     },function(err){})
+                            //   },
+                              upImg(e){
+                                var fileObj = e.target.files[0]
+                                var reader = new FileReader();
+                                reader.onload = function(){
+                                    var imgurl = reader.result
+                                    console.log('wenjian', reader.result)
+                                    document.getElementById('img').src = imgurl
+                                }
+                                reader.readAsDataURL(fileObj)
+                                    // this.img_Url = imgurl;
+                            }
+                              
+                          }
+                      })
+                    </script>
+                
+              
+            </div>
+        </div>
+    </body>
+</html>
+

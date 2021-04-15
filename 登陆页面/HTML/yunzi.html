@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <style type="text/css"></style>
+    <title>云淄</title>
+</head>
+<body>
+    <script src="../JS/JQ.min.js"></script>
+    <script src="../JS/jquery-form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../JS/index.js"></script>
+    <div id="block"></div>
+    <div id="top-right">
+       <a class="topright" href="">登录</a> 
+        <span>|</span>
+        <a class="topright" href="./其他界面/注册面板1/HTML/注册面板.html">注册</a> 
+    </div>
+
+    <div style="transform: scale(0.9); ">
+        <div class="main-img">
+            <div id="white-slip"></div>
+            <div id="white-slip-1"></div>
+            <img id="cloud" src="../image/cloud.png" alt="">
+            <img id="cloud-1" src="../image/cloud.png" alt="">
+            <img id="cloud-2" src="../image/cloud.png" alt="">
+        </div> 
+        <div id="main-box">
+            <b class="title">云淄</b>
+        <form id="userData" @submit.prevent="submitFrom()" >
+                <div id="big-box">
+                    <div id="from-number">
+                        <div id="left-img"> <img id="myimg" src="../image/我的-1.png" alt=""></div>
+                        <input name="name" id="first-form" type="text" value=" 请输入账号" onclick="back1()" onblur="reback()" autocomplete="off" V-model="name" >
+                    </div>
+                            <div id="from-number">
+                                <div id="left-img"> <img id="password0" src="../image/密码-1.png" alt=""> </div>
+                                <input name="password" id="first-form-1" type="text" value=" 请输入密码"  onclick="back2()" onblur="reback1()" autocomplete="off" V-model="password">
+                             </div>
+                <a id="min-word" href="./其他界面/忘记密码1/HTML/忘记密码.html">忘记密码</a>
+                <a id="min-word" href="./其他界面/短信登陆/HTML/短信登陆.html">短信登陆</a>
+                            <div id="agree"> 
+                                <input  style="background-color: #2F4DBF;" type="checkbox" id="accept" onclick="backred()">
+                                <span id="bered" style="color: #707070;"> &nbsp  我已同意<a id="num" style="color:#0893C7" href="../HTML/其他界面/用户协议/HTML/用户协议.html">《用户协议》</a>相关条款</span>
+                            </div>
+            </div>
+            <button type="submit" id="main-button" onclick="enable()">Logging</button>
+
+        </form>
+            
+                    <script>
+                        var app = new Vue({
+                          el: "#userData",
+                            data:{   
+	                            name:" 请输入账号",
+	                            password:" 请输入密码"
+                                },
+                          methods:
+                          {
+                               submitFrom()
+                              { 
+                                 if( document.getElementById("accept").checked)
+                                    {
+                                        var that=this;
+                                var params = new URLSearchParams();
+                                params.append('key', 'value');
+                                console.log(that.name);
+                                  console.log(that.password);
+                                 axios.post("http://javahome1.natapp1.cc/Empproject/login",{name:this.name+'',password:this.password+''},{'Content-Type': "application/json;charset=UTF-8",}).then
+                                (function(response) {
+                                    console.log(localStorage.token)
+                                  console.log(response);
+                                  console.log(response.data.token);
+                            
+                                  if(response.data== false){
+                                    document.getElementById("first-form-1").type="text";
+                                    document.getElementById("first-form-1").value="密码输入错误";
+                                    document.getElementById("first-form-1").style.color="#FF7A7A";
+                                    document.getElementById("password0").setAttribute("src","../image/感叹号@3x.png");
+                                  }
+                                  else{
+                                    for(var i=1;i<3;i++){
+                                         var box=document.getElementById("min-word");
+                                        box.parentNode.removeChild(box);
+                                        }
+                                        for(var i=1;i<2;i++){
+                                            var box=document.getElementById("first-form");
+                                            box.parentNode.removeChild(box);
+                                        }
+                                            for(var i=1;i<3;i++){
+                                                var box=document.getElementById("left-img");
+                                                box.parentNode.removeChild(box);
+                                                }
+                                                    for(var i=1;i<3;i++){
+                                                        var box=document.getElementById("from-number");
+                                                        box.parentNode.removeChild(box);
+                                                                        }
+                                                                for(var i=1;i<2;i++){
+                                                            var box=document.getElementById("agree");
+                                                            box.parentNode.removeChild(box);
+                                                                                        }
+
+                                                            var img=document.getElementById("succee");
+                                                             img.style.display="block";
+                                                                document.getElementById("main-button-1").style.display = "block";
+                                                                localStorage.token=response.data.token;
+                                                
+                                  }
+                                },function(err){})
+                                        return true;
+                                    }
+                                else
+                                     { 
+                                        document.getElementById("bered").style.color="#EC4E4E";
+                                        return false;
+                                        }            
+                  
+                              }
+                          }
+                      })
+                    </script>
+
+            <a href="../../主页/HTML/主页.html"><button type="submit" id="main-button-1" >continue</button></a>
+            <div id="box-succee">
+                <div><img id="succee" src="../image/欢迎牌.png" alt=""></div>
+                <div id="succee-word">验证成功</div>
+            </div>
+     
+
+        </div>
+    </div> 
+</body>
+</html>
+</html>

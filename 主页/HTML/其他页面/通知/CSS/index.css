@@ -1,0 +1,214 @@
+ /*居中盒子  */
+ #tocenter{
+     margin:0 auto;
+ } 
+ 
+/* 上方导航栏 */
+#white-line-1{
+    position:absolute;
+    top:-100px;
+    height: 60px;
+    width: 260px;
+    left:0px;
+    background-color: #ffffff;
+    background-color: #ffffff;
+    animation: line 0.5s ease-out forwards; 
+}
+@keyframes line{
+    to{top:0px}   
+}
+#white-line{
+    position:absolute;
+    top:-100px;
+    height: 60px;
+    width: 1275px;
+    left:260px;
+    background-color: #ffffff;
+    animation: line 0.5s ease-out forwards;   
+}
+#logo{
+    position:absolute;
+    top:5px;
+    left:0px;
+    color: #2F4DBF;
+    font-size: 20px;
+        cursor:default;
+        transition: 0.8s;
+}
+#logo::before{
+    content: "";
+    background-image: url(../image/logo.png);
+    background-size: cover;
+    width: 50px;
+    height: 58px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    transform: scale(0.8);
+}
+ 
+#record{
+    position:absolute;
+    left:130px;
+    height:60px;
+    width: 100px;
+    text-align: center;
+    color: #000000;
+    border-left: 2px solid #E8EEF0;
+    border-right: 2px solid #E8EEF0;
+    border-bottom:5px solid #2F4DBF;
+    cursor:default;
+}
+#record:hover{
+    background-color: #EEEEEE;
+    color: #2F4DBF;
+}
+        /* 搜索框 */
+#search{
+    position: relative;
+    top:10px;
+    left:610px;
+    width: 350px;
+    height:25px;
+    border-radius: 7px 7px 7px 7px;
+    border :2px solid #C7D8DE;
+    padding: 5px;
+    font-size: 15px;
+    z-index: 1000;
+}
+#search-box{
+    position: relative;
+    top:-1px;
+    width: 220px;
+    height: 28px;
+    color:#999999;
+    border: none;
+    outline: none;
+}
+    /* 搜索按钮 */
+    #search-button{
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        color: #89979C;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    #button-box{
+        position: relative;
+        left:50px;
+        background-color:transparent;
+        border: none;
+        outline: none;
+        transition: 0.8s;
+    }
+    #button-box:hover{
+       transform: scale(0.8);
+    }
+/* 蓝色标题栏 */
+#blue-line{
+    position: relative;
+    top:80px;
+    left:150px;
+    height: 70px;
+    width:1240px;
+    background-color:#2F4DBF ;
+}
+#alarm{
+    position: relative;
+    top:15px;
+    left:60px;
+    font-family: "iconfont" !important;
+    font-size: 50px;
+    font-style: normal;
+    color:#ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: 0.9;
+}
+#inform{
+    position: relative;
+    top:10px;
+    left:100px;
+    font-size: 40px;
+    color: #ffffff;
+   
+}
+/* 主体表格盒子 */
+@keyframes form{
+    to{height: 550px;}
+}
+#form-line{
+    position: relative;
+    top:80px;
+    left:150px;
+    height:0;
+    width:1238px;
+    background-color:#ffffff ;
+    overflow-x: hidden;
+    /* box-shadow: 20px 20px 15px #888888; */
+    animation: form 1.2s forwards; 
+    animation-delay: 0.3s;
+}
+    /* 每个表格的小盒子 */
+    #form-box{
+        position: relative;
+        width: 1200px;
+        height: 210px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        left: 40px;
+        display: block;
+    }
+   /* 表格 */
+   #form-top{
+   
+       background-color: #EEEEEE;
+       text-align: center;
+       
+   }
+   #big-form{
+       width: 200px;
+       height: 40px;
+       font-size: 20px;
+       border-right: 2px solid #cfcfd1;
+       word-break:break-all;
+   }
+   #min-form{
+       width: 100px;
+       height: 40px;
+       font-size: 20px;
+       border-right: 2px solid#cfcfd1;
+       word-break:break-all;
+   }
+
+
+#form-content{
+    background-color: #ffffff;
+    text-align: center;
+    
+}
+#max-form{
+    width: 200px;
+    height: 150px;
+    font-size: 20px;
+    border: 2px solid #cfcfd1;
+    word-break:break-all;
+    text-align: center;
+}
+#small-form{
+    width: 100px;
+    height: 150px;
+    font-size: 20px;
+    border: 2px solid #cfcfd1;
+    word-break:break-all;
+}
+#most-form{
+    width: 300px;
+    height: 150px;
+    font-size: 20px;
+    border: 2px solid #cfcfd1;
+    word-break:break-all;
+}
+ 
+    

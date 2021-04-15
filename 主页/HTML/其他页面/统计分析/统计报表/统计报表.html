@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>统计报表</title>
+    <link rel="stylesheet" href="main4-style.css">
+    <link rel="stylesheet" href="main4-common.css">
+    <link rel="stylesheet" href="main4-javaScript.js">
+    <link rel="shortcut icon" href="../../../../favicon.ico" />
+    <style>
+        .boxmain{
+            width: 1536px;
+            height: 2628px;
+            margin: 0 auto;
+        }
+        .boxmain-head{
+            width: 1536px;
+            height: 2628px;
+            background-color: #D1A054;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="boxmain">
+        <div class="boxmain-head">
+            <div class="boxmain-head-1">
+                <div class="boxmain-head-box1-img1">
+                    <img src="./img./15.png" width="67px" height="78px">
+                </div>
+                <div class="boxmain-head-box1-span1"><span>总计读书</span></div>
+                <div class="boxmain-head-box1-span2"><span>47</span></div>
+
+                <div class="boxmain-head-box2-img1">
+                    <img src="./img./16.png" width="67px" height="78px">
+                </div>
+                <div class="boxmain-head-box2-span1"><span>本月读书</span></div>
+                <div class="boxmain-head-box2-span2"><span>9</span></div>
+
+                <div class="boxmain-head-box3-img1">
+                    <img src="./img./17.png" width="67px" height="78px">
+                </div>
+                <div class="boxmain-head-box3-span1"><span>正在借阅</span></div>
+                <div class="boxmain-head-box3-span2"><span>2</span></div>
+                <div id="container" style="height: 320px; width:1120px;font-size: 16px;" ></div>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+        
+
+        <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+
+var option;
+
+
+
+option = {
+   
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data: ['借阅', '归还']
+    },
+
+    calculable: true,
+    xAxis: [
+        {
+            type: 'category',
+            data: ['上个月','', '这个月','' ,'总共',]
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    series: [
+        {
+            name: '借阅',
+            type: 'bar',
+            data: [2.0, ,4.9, ,7.0],
+           
+        },
+        {
+            name: '归还',
+            type: 'bar',
+            data: [2.6, ,5.9, ,9.0],
+            
+        }
+    ]
+};
+
+if (option && typeof option === 'object') {
+    myChart.setOption(option);
+}
+
+        </script>
+            </div>
+            <div class="bomain-body1">
+                <div class="bomain-body1-span1"><span>最多借出</span></div>
+                <div class="bomain-body1-img1"><img src="./img./18.png" width="122px" height="122px"></div>
+                <div class="bomain-body1-img2"><img src="./img/img1.jpg" maxwidth="152px" height="202px"></div>
+            </div>
+            <div class="bomain-body2">
+                <div class="bomain-body2-span1"><span>最多搜索</span></div>
+                <div class="bomain-body2-img1"><img src="./img./19.png" width="122px" height="122px"></div>
+                <div class="bomain-body2-img2"><img src="./img/img2.jpg" maxwidth="152px" height="202px"></div>
+            </div>
+            <div class="bomain-body3">
+                <div class="bomain-body3-span1"><span>最多预约</span></div>
+                <div class="bomain-body3-img1"><img src="./img./20.png" width="100px" height="122px"></div>
+                <div class="bomain-body3-img2"><img src="./img/img3.jpg" maxwidth="162px" height="202px"></div>
+            </div>
+            <div class="boxbody">
+                <div id="container2" style="height: 480px;width: 1120px;"></div>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+        
+        <script type="text/javascript">
+var dom = document.getElementById("container2");
+var myChart = echarts.init(dom);
+var app = {};
+
+var option;
+
+
+
+option = {
+    
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data: ['维修', '预约', '借阅', '购入', '查找']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    // toolbox: {
+    //     feature: {
+    //         saveAsImage: {}
+    //     }
+    // },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name: '维修',
+            type: 'line',
+            stack: '总量',
+            data: [12, 13, 10, 13, 9, 23, 21]
+        },
+        {
+            name: '预约',
+            type: 'line',
+            stack: '总量',
+            data: [22, 18, 11, 2, 12, 32, 10]
+        },
+        {
+            name: '借阅',
+            type: 'line',
+            stack: '总量',
+            data: [15, 23, 20, 15, 19, 10, 11]
+        },
+        {
+            name: '购入',
+            type: 'line',
+            stack: '总量',
+            data: [20, 2, 3,9, 10, 12, 15]
+        },
+        {
+            name: '查找',
+            type: 'line',
+            stack: '总量',
+            data: [20, 12, 1, 4, 9, 3, 2]
+        }
+    ]
+};
+
+if (option && typeof option === 'object') {
+    myChart.setOption(option);
+}
+
+
+        </script>
+            </div>
+            <div class="footerbox1">
+                <div class="footerbox1-a1"><a href="#">更多探索</a></div>
+                <div class="footerbox1-img"><img src="./img./21.png" width="173px" height="173px"></div>
+                <div class="footerbox2-a1"><a href="#">猜你喜欢</a></div>
+                <div class="footerbox2-img"><img src="./img./22.png" width="173px" height="173px"></div>
+            </div>
+            <div class="footerbox2">
+                <div class="footerbox2-span1"><span>阅读天数</span></div>
+                <div class="footerbox2-span2"><span>197</span></div>
+                <div class="footerbox2-img2"><img src="./img./23.png" width="140px" height="140px"></div>
+            </div>
+        </div>
+        <a href="javascript:history.back(-1)">
+            <img style="position:fixed;  z-index: 100000; transform: scale(1.2);" src="./img/Log out.png" alt="">
+            <span style="position: fixed;  top:55px;left: 20px; z-index: 100000;color:white;">返回</span>
+        </a>
+    </div>
+</body>
+</html>

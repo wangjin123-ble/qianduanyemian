@@ -1,0 +1,187 @@
+body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,input,form,a,p,textarea{
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+/* ol,ul,li{
+	/*list-style: none;*/
+a{
+	text-decoration: none;
+	display: block;
+	color: #999;
+}
+img{
+	border: none;
+	display: block;
+}
+.clearfloat{
+	zoom:1;
+}
+.clearfloat:After{
+	display: block;
+	clip: both;
+	content: "";
+	visibility: hidden;
+	height: 0;
+}
+/* 上方导航栏 */
+@keyframes line{
+    to{top:0px}   
+}
+#white-line{
+    position:absolute;
+    top:-100px;
+    height: 60px;
+    width: 1275px;
+    left:260px;
+    background-color: #ffffff;
+    animation: line 0.5s ease-out forwards;   
+}
+#menu{
+    position:absolute;
+    top:15px;
+    left:50px;
+    font-family: "iconfont" !important;
+        font-size: 30px;
+        font-style: normal;
+        color:#29304B;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: rotate(180deg);
+        cursor:default;
+        transition: 0.8s;
+}
+#menu:hover{
+    transform: scale(0.8) rotate(180deg);
+}
+#record{
+    position:absolute;
+    left:130px;
+    height:60px;
+    width: 100px;
+    text-align: center;
+    color: #000000;
+    border-left: 2px solid #E8EEF0;
+    border-right: 2px solid #E8EEF0;
+    border-bottom:5px solid #2F4DBF;
+}
+        /* 搜索框 */
+#search{
+    position: relative;
+    top:10px;
+    left:610px;
+    width: 350px;
+    height:25px;
+    border-radius: 7px 7px 7px 7px;
+    border :2px solid #C7D8DE;
+    padding: 5px;
+    font-size: 15px;
+    z-index: 1000;
+}
+#search-box{
+    position: relative;
+    top:-1px;
+    width: 220px;
+    height: 28px;
+    color:#999999;
+    border: none;
+    outline: none;
+}
+    /* 搜索按钮 */
+    #search-button{
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        color: #89979C;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    #button-box{
+        position: relative;
+        left:50px;
+        background-color:transparent;
+        border: none;
+        outline: none;
+        transition: 0.8s;
+    }
+    #button-box:hover{
+       transform: scale(0.8);
+    }
+    /* 右边三块 */
+            /* 头像 */
+    #head-img{
+        position: relative;
+        top:-25px;
+        left:1030px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #707070;
+        color: #707070;
+        border-radius: 50% 50%;
+        font-size: 15px;
+        text-align: center;   
+        cursor: default;
+    }
+        /* 提醒 */
+    #alarm{
+        position: relative;
+        top:-60px;
+        left:1100px;
+        font-family: "iconfont" !important;
+        font-size: 35px;
+        font-style: normal;
+        color: #89979C;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        cursor: default;
+        transition: 0.8s;
+    }
+    #alarm:hover{
+         color:#2F4DBF;
+       top:-65px
+    }
+    
+        /* 设置 */
+        #set{
+            position: relative;
+            top:-60px;
+            left:1110px;
+            font-family: "iconfont" !important;
+            font-size: 32px;
+            font-style: normal;
+            color:#5F9DB5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-left: 15px;
+            cursor: default;
+            transition: 1s;
+        }
+        #set:hover{
+            transform: rotate(90deg);
+        }
+        #set-up{
+            position: relative;
+            top:-50px;
+            left:1150px;
+            width: 60px;
+            height: 80px;
+            font-size: 15px;
+            border: 2px solid #707070;
+            border-radius: 10px 10px 10px 10px;
+            z-index: 100;
+            text-align: center;
+        
+            display: none;
+         
+        }
+        #min-cell{
+            background-color: #ffffff;
+            border-bottom: 2px solid #29304B;
+            height: 25px;
+        }
+        #min-cell:hover{
+            background-color:#1F87DD;
+            color:  #ffffff;
+            opacity: 0.8;
+        }
+    

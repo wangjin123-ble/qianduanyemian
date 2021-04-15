@@ -1,0 +1,22 @@
+body,div,a,p,b,li,ol,ul,input,form,h1,h2,h3,h4,h5,textarea{
+	margin:0;
+	padding:0;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-seri;
+}
+.ol,.ul,.li
+{list-style-type:square; 
+}
+a{
+	text-decoration: none;
+	display:line-block;
+	color:#fff;
+	z-index: 1;
+}
+a:hover{
+	color:#0a8fc8;
+	cursor:default;}
+
+img{
+	display:block;
+	border:none;
+}

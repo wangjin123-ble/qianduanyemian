@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="shortcut icon" href=".. /../../../../../favicon.ico" />
+    <style type="text/css"></style>
+    <title>注册面板</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../JS/index.js"></script>
+    <div id="block"></div>
+    <div id="top-right">
+      <a class="topright" href="../../../yunzi.html">登录</a> 
+       <span>|</span>
+       <a class="topright" href="./其他界面/注册面板1/HTML/注册面板.html">注册</a> 
+   </div>
+    <div  style="transform: scale(0.9); ">
+        <div class="main-img">
+            <div id="white-slip"></div>
+            <div id="white-slip-1"></div>
+            <img id="cloud" src="../image/cloud.png" alt="">
+            <img id="cloud-1" src="../image/cloud.png" alt="">
+            <img id="cloud-2" src="../image/cloud.png" alt="">
+        </div> 
+        <div id="main-box">
+            <div class="title">Creat Account</div>
+            <form id="big-box"  @submit.prevent="submitFrom()">
+                <div id="from-number">
+                    <div id="left-img"> <img id="myimg" src="../image/我的-1.png" alt=""></div>
+                    <input id="first-form" type="text" name="tel" value=" 请输入手机号码" onclick="back1()" onblur="reback()" v-model="receiverEmail" autocomplete="off">
+                    <button id="send" type="button" @click="becode">| send</button>
+                </div>
+                <div id="from-number">
+                    <div id="left-img"> <img id="myimg" src="../image/我的-1.png" alt=""></div>
+                    <input id="first-form-0" type="text" name="code" value=" 请输入手机号码" onclick="back0()" onblur="reback0()" v-model="code" autocomplete="off">
+                </div>
+                <div id="from-number">
+                    <div id="left-img"> <img id="password" src="../image/密码-1.png" alt=""> </div>
+                    <input id="first-form-1" type="text" name="password" value=" 请输入您的密码"  onclick="back2()" onblur="reback1()" v-model="password">
+                </div>
+                <div id="from-number">
+                    <div id="left-img"> <img id="password-1" src="../image/密码-1.png" alt=""> </div>
+                    <input id="first-form-2" type="text" value=" 请再次输入密码" name="password2" onclick="back3()" onblur="reback2()" v-model="password2">
+                </div>
+                <button type="submit" id="main-button" onclick="mainbord()" ><b>set up</b></button>
+                    <!-- <img style="position: relative;top: -10px;left: 175px; transform: scale(0.16);opacity: 0.8;" src="../image/首页.png" alt="">
+                    <a href="../../../yunzi.html" id="return"><span style="position: relative; top:-18px;left: 110px;">点击返回登陆页面</span></a> -->
+            </form>
+            <script>
+                var app = new Vue({
+                  el: "#big-box",
+                    data:{   
+                      receiverEmail:" 请输入邮箱",
+                        password:" 请输入您的密码",
+                        password2:" 请再次输入密码",
+                        code:' 请输入验证码'
+                        },
+                mounted:function(){
+                    this.send();
+                                 
+                  },
+                  methods:
+                  {
+                      
+                        send(){
+                            localStorage.token="";
+                            axios.get("http://javahome1.natapp1.cc/Empproject/createCode").then
+                                (function(response) {
+                                  console.log(response.data);
+                                  // this.tel=response.data;
+                                           
+                                },function(err){
+                                //   console.log(err);
+                                })
+
+                        },
+                        becode(){
+                            var that=this;
+                                 axios.post("http://javahome1.natapp1.cc/Empproject/sendmail",{'receiverEmail':this.receiverEmail+'','token':""}).then
+                                (function(response) {
+                                  console.log(response.data);         
+                                },function(err){
+                                  // console.log(err);
+                                })
+                        },       
+                       submitFrom()
+                      {    
+                        var that=this;
+                        var params = new URLSearchParams();
+                        params.append('key', 'value');
+                         axios.post("http://javahome1.natapp1.cc/Empproject/rst",{receiverEmail:this.receiverEmail+'',password:this.password+'',password2:this.password2+'',code:this.code+''},{headers: {'Content-Type':'application/x-www-form-urlencoded'}}).then
+                        (function(response) {
+                          console.log(response.data);
+                          if(response.data==false)
+                          {
+                            document.getElementById("first-form-2").type="text";
+                            document.getElementById("first-form-2").value="邮箱或密码格式错误";
+                            document.getElementById("first-form-2").style.color="#FF7A7A";
+                            document.getElementById("password-1").setAttribute("src","../image/感叹号@3x.png");
+                          }
+                          else{
+                            for(var i=1;i<2;i++){
+                                var box=document.getElementById("first-form");
+                                box.parentNode.removeChild(box);
+                                                 }
+                                for(var i=1;i<4;i++){
+                                     var box=document.getElementById("left-img");
+                                    box.parentNode.removeChild(box);
+                                                    }
+                                    for(var i=1;i<5;i++){
+                                        var box=document.getElementById("from-number");
+                                        box.parentNode.removeChild(box);
+                                                         }
+                                    document.getElementById("main-button").style.display="none";
+                                    document.getElementById("main-button-1").style.display="block";
+                                    var img=document.getElementById("succee");
+                                    img.style.display="block";
+                                    document.getElementById("main-button").innerHTML = "continue";
+                                    document.getElementById("succee-word").style.display="block";
+                          
+                                 }
+                   
+                        },function(err){})
+                      }
+                  }
+              })
+            </script>
+           <a href="../../../yunzi.html"> <button type="submit" id="main-button-1"  >continue</button></a>
+            <div id="box-succee">
+                <div><img id="succee" src="../image/注册成功.png" alt=""></div>
+                <div id="succee-word">注册成功</div>
+            </div>
+     
+
+        </div>
+        
+        
+    </div> 
+</body>
+</html>

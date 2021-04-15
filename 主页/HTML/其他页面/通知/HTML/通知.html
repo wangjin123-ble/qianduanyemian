@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/icon图标0/iconfont.css">
+    <link rel="shortcut icon" href="../../../../favicon.ico" />
+    <style type="text/css"></style>
+    <title>通知</title>
+</head>
+<body style="overflow: hidden;">
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../JS/index.js"></script>
+     
+
+            <!-- 上方导航栏 -->
+            <div id="white-line-1"></div>
+            <div id="white-line">
+                   <!-- 左侧各项 -->
+              <span id="logo">云淄</span>
+            <a href="../../../主页.html"><div id="record"><span style="position: relative; top:35%">返回主页</span></div></a>
+                     <!--搜索框 -->
+               <div id="search">
+                 <span>搜索 &nbsp;</span>
+                 <input id="search-box" type="text" value="例如：书名" onclick="back()" onblur="back0()"> 
+                  <button id="button-box" > <span id="search-button">&#xe825;</span></button>
+               </div>
+    </div> 
+        <!--蓝色标题栏  -->
+        <div id="blue-line">
+          <span id="alarm">&#xe605;</span>
+          <span id="inform">我的通知</span>
+
+        </div>
+        <!-- 主体表格 -->
+        <div id="form-line">
+                <!-- 审核成功 -->
+          <div id="form-box">
+            <table  style= " table-layout:fixed; border-collapse:collapse;" v-for="it in message">
+              <tr id="form-top">
+                  <td id="big-form"colspan=3>2021/1/24/12:00</td>
+                  <td id="big-form"colspan=3>编号</td>
+                  <td id="big-form"colspan=3>资产名称</td>
+                  <td id="min-form">申请借阅</td>
+                  <td id="min-form">审核状态</td>
+                  <td id="min-form">归还时间</ td>
+                  <td id="big-form" colspan=3 style="border: none;"> </td>
+               </tr>
+               <tr id="form-content" v-for="it in message">
+                <td id="max-form"colspan=3><img style="max-width: 168px;max-height: 160px;" src="../image/哑舍.png" alt=""></td>
+                <td id="max-form"colspan=3>12412311</td>
+                <td id="max-form"colspan=3>《哑舍》</td>
+                <td id="small-form">2020/10/3 </td>
+                <td id="small-form">未通过 </td>
+                <td id="small-form"></td>
+                <td id="max-form" colspan=3 >亲爱的用户您好！很抱歉您所申请预约的书籍未通过管理员的审批！很抱歉为您带来不便！谢谢您的配合！</td>
+             </tr>
+            </table>    
+            <table  style= " table-layout:fixed; border-collapse:collapse;" v-for="it in message">
+              <tr id="form-top">
+                  <td id="big-form"colspan=3>2021/1/24/12:00</td>
+                  <td id="big-form"colspan=3>编号</td>
+                  <td id="big-form"colspan=3>资产名称</td>
+                  <td id="min-form">申请借阅</td>
+                  <td id="min-form">审核状态</td>
+                  <td id="min-form">归还时间</ td>
+                  <td id="big-form" colspan=3 style="border: none;"> </td>
+               </tr>
+               <tr id="form-content" v-for="it in message">
+                <td id="max-form"colspan=3><img style="max-width: 168px;max-height: 160px;" src="../image/三体1.png" alt=""></td>
+                <td id="max-form"colspan=3>12412312</td>
+                <td id="max-form"colspan=3>《三体》</td>
+                <td id="small-form">2020/11/8 </td>
+                <td id="small-form">已通过 </td>
+                <td id="small-form">2021/1/6</td>
+                <td id="max-form" colspan=3 >亲爱的用户您好！您所申请预约的书籍已经通过管理员的审批！请你保护好书籍并按时归还！谢谢您的配合！</td>
+             </tr>
+            </table>    
+    </div>
+    <!-- <script>
+      var app=new Vue({
+        el:"#form-box",
+        data:{
+          message:[
+            { photo:"",number:"",book:"",Time:"", condition:"",name:"",word:""},
+          ]
+        },
+        mounted:function(){
+            this.loading();
+        },
+        methods:{
+             loading:function()
+                    {    
+                     //  var that=this;
+                     //   axios.get("http://ff3cbh.natappfree.cc/Web_war_exploded/search/ShowAllSearchController",
+                     //   {book:this.book+'',makeTime:this.makeTime+'',condition:this.condition+'',backTime:this.backTime+'',name:this.name+''},
+                     //  {headers: {'Content-Type':'application/x-www-form-urlencoded'}}).then
+                     //  (function(response) {
+                     //    console.log(response);
+                     //  },function(err){})
+                    }
+        }
+      }) -->
+    </script>
+        </div>
+</body>
+</html>

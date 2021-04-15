@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/icon图标0/iconfont.css">
+      <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>  
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>          
+    <style type="text/css"></style>
+    <title>归还</title>
+</head>
+<body style="overflow: hidden;">
+
+    <script src="../JS/index.js"></script>
+    <!-- 左侧导航栏 -->
+    <div id="tocenter"> 
+      <div id="blue-line">
+        <div id="title">
+           <div id="main-logo" > <img src="../image/logo.png" alt=""></div>
+            <span id="main-word">云淄</span>
+        </div>
+    <a href="../../../../主页.html">  <ul id="min-box">
+      <span id="left-img">&#xe691;</span>
+        <span id="min-word">主页</span>
+    </ul></a>
+      <ul id="min-box-1" onclick="beopen4()">
+        <span id="left-img">&#xe641;</span>
+          <span id="min-word">管理</span>
+          <span id="be-more-4">&#xe637;</span>
+      </ul>
+          <ul id="two-box-4">
+            <a href="../../../档案编辑/管理-档案编辑-主页/HTML/主页.html"><li id="two-word">档案编辑</li></a>
+           <a href="../../../管理审批/管理-审批-主页/HTML/主页.html"> <li id="two-word">管理审批</li></a>
+            <a href="../../../黑名单/管理-黑名单-主页/HTML/主页.html"><li id="two-word">黑名单</li></a>
+      </ul>
+      <ul id="min-box-2" onclick="beopen1()">
+        <span id="left-img">&#xe7a4;</span>
+          <span id="min-word">物品档案</span>
+          <span id="be-more-0">&#xe637;</span>
+      </ul>
+            <ul id="two-box-0">
+              <a href="../../../物品档案/物品档案/物品档案.html"><li id="two-word">目录</li></a>
+           <a href="../../../物品档案/书籍简介/书籍简介.html"> <li id="two-word">查询</li></a>
+   </ul>
+      <ul id="min-box-3" onclick="beopen()" onfocus="tolook()">
+        <span id="left-img">&#xe6f9;</span>
+          <span id="min-word">物品交流</span>
+          <span id="be-more-1">&#xe637;</span>
+      </ul>
+            <ul id="two-box-1">
+                 <a href="../../../物品交流/物品交流-预约/HTML/预约.html"><li id="two-word">预约</li></a>
+                 <a href="../../../物品交流/物品交流-借阅/HTML/借阅.html"><li id="two-word">借用</li></a>
+                <a href="../../../物品交流/物品交流-归还/HTML/归还.html"> <li id="two-word">归还</li></a>
+            </ul>
+             <!-- 修改部分(将id:be-more改成了be-more-3;min-box的盒子后加了onclick="beopen3()"，也可以直接把这部分粘贴过去替代原有内容) -->
+        <ul id="min-box-4" onclick="beopen3()">
+          <span id="left-img">&#xe613;</span>
+                 <span id="min-word">统计分析</span>
+                 <span id="be-more-3">&#xe637;</span>
+         </ul>
+            <!-- 修改部分 -->
+         <!-- 添加部分 -->
+             <ul id="two-box-3">
+             <a href="../../../统计分析/统计分析1/HTML/统计分析1.html"><li id="two-word">统计分析</li></a>
+             <a href="../../../统计分析/统计报表/统计报表.html"><li id="two-word">统计报表</li></a>
+             </ul>
+          <!-- 添加部分 -->
+         <ul id="min-box-5" onclick="beopen0()">
+          <span id="left-img">&#xe690;</span>
+                 <span id="min-word">资产维修</span>
+                 <span id="be-more-2">&#xe637;</span>
+         </ul> 
+             <ul id="two-box-2">
+                 <a href="../../../资产维修/维修申请/维修申请.html"><li id="two-word">维修申请</li></a>
+                 <a href="../../../资产维修/报修处理/报修处理.html"><li id="two-word">报修处理</li></a>
+             </ul>
+                <a href="../../../帮助/帮助.html">    <ul id="min-box-6">
+                  <span id="left-img">&#xea02;</span>
+                          <span id="min-word">帮助</span>
+                 </ul></a>
+         <a href="javascript:history.back(-1)"><img id="toback" src="../image/Log out.png" alt=""> </a>  
+    </div>
+
+
+            <!-- 上方导航栏 -->
+            <div id="white-line">
+               <!--搜索框 -->
+               <div id="search">
+                 <span>搜索 &nbsp;</span>
+                 <input id="search-box" type="text" placeholder="例如：书名"> 
+                  <button id="button-box"> <span id="search-button">&#xe825;</span></button>
+               </div>
+               <!-- 右边各项 -->
+                <!-- <div id="head-img"> <span style="position: relative; top:4px;">头像</span></div>
+                <span id="alarm">&#xe605;</span>
+                <span id="set">&#xe51b;</span> -->
+                
+
+            </div>
+            <span id="appointment">归还</span>
+            <!-- 中间白块或图标 -->
+            <div id="middle">
+              <span id="searchBookNameTxt">图书名称</span>
+              <input type="text" id="searchBookName" name="ShuRuKuang">
+              <span id="searchAuthorNameTxt">作者名称</span>
+              <input type="text" id="searchAuthorName" name="ShuRuKuang">
+              <span id="searchIdTxt">编号</span>
+              <input type="text" id="searchId" name="ShuRuKuang">
+              <button id="chaxun">查询</button>
+              <button id="qingkong">清空</button>
+            </div>
+            <!-- 下方主要板块 -->
+            <div id="main-block">
+              <span id="duoxuanTxt">批量操作</span>
+              <button id="duoxuanYuyue">归还</button>
+              <button id="quxiaoButton">取消</button>
+            <div id="app">
+              <table cellspacing="0" id="bookBiaoge">
+                <tr id="bookTitle" >
+                  <th id="bookTitleXuanze"></th>
+                  <th id="bookTitle1">编号</th>
+                  <th id="bookTitle2">图书名称</th>
+                  <th id="bookTitle3">作者名称</th>
+                  <th id="bookTitle4">借阅日期</th>
+                  <th id="bookTitle5">归还截至日期</th>
+                  <th id="bookTitle6">操作</th>
+                </tr>
+                <tr id="bookTitleContent" v-for="item in message">
+                  <td id="bookTitleXuanze"><input type="checkbox" name="items"></td>
+                  <td>{{ item.ID }}</td>
+                  <td>{{ item.apply_book }}</td>
+                  <td>{{ item.author }}</td>
+                  <td>{{ item.apply_time }}</td>
+                  <td>{{ item.deadline }}</td>
+                  <td>
+                    <a href="" style="display: inline-block;width: 48px;height: 25px;text-decoration: none;color: #999999;position: relative;">
+                      <input type="submit" value="查看" id="chaKan" @click.prevent="SubmitResult2(item.ID)">
+                    </a>&nbsp;&nbsp;<input type="submit" value="归还" class="sendBtn" id="sendBtn" @click.prevent="SubmitResult1(item.ID,item.apply_book,item.author,item.deadline)"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+    </div> 
+    <script>
+      var app = new Vue({
+        el:"#app",
+        data:{ 
+          // ID:"",
+          // name:"",
+          // articles:"",
+          // types:"",
+          // pass:"通过",
+          // nopass:"驳回",
+          message:[]
+        },
+        mounted:function(){
+                  this.loading();
+                },
+                methods:{
+                  loading:function(){
+                    var that = this;
+                    axios.post("http://javahome1.natapp1.cc/Empproject/wrs").then
+                    (function(response){
+                      console.log(response.data)
+                      that.message = response.data
+                    },function(err){})
+                },
+        SubmitResult1(ID,apply_book,author,deadline){
+          // var sendBtn = document.getElementsByClassName("sendBtn")
+          // var x;
+          // sendBtn.onclick = function(){
+          //   x = confirm("是否归还所选定的资产？")
+          //   if(x){
+              alert("已成功发送申请");
+              document.getElementById("sendBtn").style.background = "#999999";
+              document.getElementById("sendBtn").disabled=true;
+              console.log(ID);
+              console.log(apply_book);
+              console.log(author);
+              console.log(deadline);
+              var that = this;
+              axios.post("http://javahome1.natapp1.cc/Empproject/wts",{ID,apply_book,author,deadline}).then
+              (function(response){
+                console.log(response)
+              },function(err){})
+          
+        },
+        SubmitResult2(ID){
+          var that = this;
+            axios.post("http://javahome1.natapp1.cc/Empproject/zs",{ID}).then
+            (function(response){
+              console.log(response)
+              console.log(ID)
+              //跳转到润夏的物品档案界面
+              document.location = ("")
+            },function(err){})
+        },
+        }
+      })
+    </script>
+</body>
+</html>

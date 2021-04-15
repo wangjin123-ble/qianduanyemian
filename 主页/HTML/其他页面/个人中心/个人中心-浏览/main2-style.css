@@ -1,0 +1,359 @@
+/*top的样式*/
+
+
+
+.top-img1{
+    margin-left:  229px;
+    padding-top: 8px;
+}
+.top-span1{
+    margin-left: 53px;
+    margin-top: 26px;
+    color: #2F4DBF;
+    font-size: 20px;
+}
+.top-a1{
+    font-size: 17px;
+    color: #333333;
+    margin-left: 408px;
+    margin-top: -45px;
+}
+.top-a2{
+    font-size: 18px;
+    margin-left: 551px;
+    margin-top: -23px;
+}
+
+.top-input{
+    margin-left: 783px;
+    margin-top: -47px;
+    border-left: solid 0px;
+}
+.top-span1{
+    width: 60px;
+    height: 46px;
+    border-radius: 10px 10px;
+    color: #000;
+}
+
+.top-span1{
+    margin-left: 725px;
+    margin-top: -37px;
+}
+.top-button1{
+    margin-left: 1416px;
+    margin-top: -44px;
+}
+.top-button2{
+    margin-left: 1473px;
+    margin-top: -30px;
+}
+.body3-input{
+    margin-left: 500px;
+    margin-top:  -120px;
+    position: relative;
+}
+
+
+
+
+
+
+/*body2-box的样式*/
+.body2-box{
+    width: 1536px;
+    height: 43px;
+    background-color: #F3F5F8;
+    position: relative;
+    margin-left: -155px;
+    margin-top: -45px;
+}
+.body2-input{
+    margin-top: -30px;
+}
+/*body3-box1的样式*/
+.body3-box1{
+    width: 760px;
+    height: 110px;
+    background-color: #fff;
+    margin-left: 300px;
+    margin-top: -110px;
+}
+/*提交按钮*/
+.button{
+    margin-top: -300px;
+    margin-left: 1000px;
+    transition: 0.8s;
+    
+}
+#button1{
+    transition: 0.8s;
+    width: 110px;
+    height: 50px;
+    font-size: 20px;
+    background-color:#2F4DBF;
+    color: #fff;
+    border-radius: 5px 5px;
+    border: 2px solid #fff;
+}
+
+#button1:hover{
+    transform: scale(0.8);
+ }
+ 
+
+/*头像信息*/
+.headInformation1{
+    margin-left:220px;
+    margin-top: -42px;
+    border-radius: 30px 30px;
+}
+.headInformation2{
+    margin-left: 120px;
+    margin-top: 300px;
+}
+/*方向信息*/
+.direction{
+    margin-left: 650px;
+    margin-top: -61px
+}
+.directionSearch{
+    margin-left: 750px;
+    margin-top: -33px;
+}
+/*名字信息*/
+.name{
+    margin-left: 120px;
+    margin-top: 65px;
+}
+.nameInformation{
+    margin-left: 220px;
+    margin-top: -32px;
+}
+.nameInformation2{
+    margin-left: 320px;
+    margin-top: -55px;
+
+}
+.nameInformation3{
+    margin-left: 310px;
+    margin-top: -25px;
+
+}
+
+/*期数信息*/
+.periods{
+    margin-top: -54px;
+    margin-left: 655px;
+    position: relative;
+}
+.periodsSearch{
+    margin-left: 757px;
+    margin-top: -33px;
+    position: relative;
+}
+/*性别信息*/
+.gender{
+    margin-left: 124px;
+    margin-top: 60px;
+    position: relative;
+}
+.genderSearch{
+    position: relative;
+    margin-left: 230px;
+    margin-top: -34px;
+}
+/*电话信息*/
+.phone{
+    margin-left: 655px;
+    margin-top: -60px;
+    position: relative;
+}
+
+.phoneInformation{
+    margin-left: 810px;
+    margin-top: -30px;
+    position: relative;
+}
+/*学号信息*/
+.studentNumber{
+    margin-left: 124px;
+    margin-top: 58px;
+    position: relative;
+}
+.studentNumberInformation{
+    margin-left: 230px;
+    margin-top: -30px;
+    position: relative;
+}
+
+
+/*邮件信息*/
+.email{
+    margin-left: 655px;
+    margin-top: -55px;
+    position: relative;
+}
+.emailInformation{
+    margin-left: 810px;
+    margin-top: -30px;
+    position: relative;
+}
+/*style的样式*/
+.box{
+    width: 1536px;
+    height: 1000px;
+    margin: 0 auto;
+}
+#top{
+    width: 1536px;
+    height: 77px;
+    background-color:#fff;
+}
+.body1{
+    width: 1536px;
+    height: 1166px;
+    background-color:#F3F5F8;
+   
+   
+}
+.body2{
+    width: 1226px;
+    height: 246px;
+    background-color:#2F4DBF;
+    margin-left: 155px;
+    padding-top:  43px;
+    position: absolute;
+}
+#body3{
+    width: 1226px;
+    height: 700px;
+    background-color:#fff;
+    margin-left: 155px;
+    margin-top: -898px;
+    position: absolute;
+}
+.boxline{
+    width: 450px;
+    height: 3px;
+    background-color: #F3F5F8;
+    margin-top: 15px;
+    margin-left: 100px;
+}
+.boxline2{
+    width: 450px;
+    height: 3px;
+    background-color: #F3F5F8;
+    margin-top: 22px;
+    margin-left: 627px;
+}
+.boxline3{
+    width: 450px;
+    height: 3px;
+    background-color: #F3F5F8;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+.boxline4{
+    width: 450px;
+    height: 3px;
+    background-color: #F3F5F8;
+    margin-top: 20px;
+    margin-left: 630px;
+    position: relative;
+}
+.boxline5{
+    width: 450px;
+    height: 3px;
+    background-color: #F3F5F8;
+    margin-top: 25px;
+    margin-left: 100px;
+    position: relative;
+}
+.boxline6{
+    width: 450px;
+    height: 3px;
+    background-color: #F3F5F8;
+    margin-top: 24px;
+    margin-left: 630px;
+    position: relative;
+}
+.boxline7{
+    width: 450px;
+    height: 3px;
+    background-color: #F3F5F8;
+    margin-top: 23px;
+    margin-left: 100px;
+    position: relative;
+}
+.boxline8{
+    width: 450px;
+    height: 3px;
+    background-color: #F3F5F8;
+    margin-top: 26px;
+    margin-left: 630px;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 搜索框 */
+#search{
+    position: relative;
+    top:-35px;
+    left:800px;
+    width: 350px;
+    height:25px;
+    border-radius: 7px 7px 7px 7px;
+    border :2px solid #C7D8DE;
+    padding: 5px;
+    font-size: 15px;
+    z-index: 1000;
+}
+#search-box{
+    position: relative;
+    top:-1px;
+    width: 230px;
+    height: 28px;
+    color:#999999;
+    border: none;
+    outline: none;
+}
+    /* 搜索按钮 */
+    #search-button{
+        font-family: "iconfont" !important;
+        font-size: 20px;
+        font-style: normal;
+        color: #89979C;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    #button-box{
+        position: relative;
+        left:50px;
+        background-color:transparent;
+        border: none;
+        outline: none;
+        transition: 0.8s;
+        width: 14px;
+        height: 14px;
+    }
+    #button-box:hover{
+       transform: scale(0.8);
+    }
+    

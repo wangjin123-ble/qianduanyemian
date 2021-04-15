@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>个人中心</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="common.css">
+        <link rel="stylesheet" href="JavaScript.js">
+        <link rel="shortcut icon" href="../../../../favicon.ico" />
+        <style>
+            /* 居中盒子 */
+            .box{
+                width: 1536px;
+                height: 1265px;
+                margin: 0 auto;
+            }
+            /* 上端导航栏 */
+            #top{
+                width: 1536px;
+                height: 77px;
+                background-color:#fff;
+            }
+            /* 主体部分body1 */
+            .body1{
+                width: 1536px;
+                height: 1166px;
+                background-color:#F3F5F8;
+            }
+            /* 主体部分body2 */
+            .body2{
+                width: 1226px;
+                height: 246px;
+                background-color:#2F4DBF;
+                margin-left: 155px;
+                padding-top:  43px;
+                position: absolute;
+            }
+            /* 主体部分body3 */
+            #body3{
+                width: 1226px;
+                height: 897px;
+                background-color:#fff;
+                margin-left: 155px;
+                margin-top: -898px;
+                position: absolute;
+            }
+            /* 下划线样式 */
+            .boxline{
+                width: 673px;
+                height: 1px;
+                background-color:  #333;
+                margin-top: 39px;
+                margin-left: 27px;
+            }
+        </style>
+        <script type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div class="box">
+        <div id="top">
+            <!-- 上端导航栏 -->
+            <div class="top-img1"><img src="./img./云淄logo.png" width="60px"  height="60px" ></div>
+           <div class="top-a1"><a href="../个人中心-浏览/个人中心-浏览.html">个人中心</a></div>
+           <div class="top-a2"><a href="../../../主页.html">返回主页</a></div>
+           <!-- 搜索按钮 -->
+           <div id="search">
+            <span>搜索 &nbsp;</span>
+            <input id="search-box" type="text" value="例如：书名" onclick="back()" onblur="back0()" v-model="query" @keyup.enter="searchInformation"> 
+             <button id="button-box"style=" background:url(./img./2.png);"></button>
+          </div>
+        </div>
+        <!-- 主体部分body1 -->
+        <div class="body1">
+            <!--主体部分body2 -->
+            <div class="body2">
+                <div class="body2-input">
+                    <div class="body2-box"></div>
+                </div>
+                </div>
+            </div>
+            <!--主体部分body3 -->
+            <div id="body3">
+                <div class="body3-input"><img  type="button" style="width: 236px;height: 236px;border-radius: 116px 116px;background:#fff" v-bind:src="headPortrait1"></div>
+                <!-- 姓名 -->
+                <div class="body3-box1">
+                            <div class="body3-box1-span1"><span><br>姓名</br></span></div>
+                            <div class="body3-box1-span2"><span v-text="direction">小米</span></div>
+                            <div class="boxline"></div>
+                </div>
+                <!-- 性别 -->
+                 <div class="body3-box2">
+                    <div class="body3-box2-span1"><span><br>性别</br></span></div>
+                    <div class="body3-box2-span2"><span v-text="gender1">女</span></div>
+                    <div class="boxline"></div>
+                </div>
+                <!-- 期数 -->
+                <div class="body3-box3">
+                    <div class="body3-box3-span1"><span><br>期数</br></span></div>
+                    <div class="body3-box3-span2"><span v-text="periods1">五</span></div>
+                    <div class="boxline"></div>
+                </div>
+                <!--方向 -->
+                <div class="body3-box4">
+                    <div class="body3-box4-span1"><span><br>方向</br></span></div>
+                    <div class="body3-box4-span2"><span v-text="direction1">前端</span></div>
+                    <div class="boxline"></div>
+                </div>
+                <!-- 学号 -->
+                <div class="body3-box5">
+                    <div class="body3-box5-span1"><span><br>学号</br></span></div>
+                    <div class="body3-box5-span2"><span v-text="studentNumber1">2020001111</span></div>
+                    <div class="boxline"></div>
+                </div>
+                <!-- 联系电话 -->
+                <div class="body3-box6">
+                    <div class="body3-box6-span1"><span><br>联系电话</br></span></div>
+                    <div class="body3-box6-span2"><span v-text="phone1">156XXXXXXXX</span></div>
+                    <div class="boxline"></div>
+                </div>
+                <!-- 电子邮箱 -->
+                <div class="body3-box7">
+                    <div class="body3-box7-span1"><span><br>电子邮箱</br></span></div>
+                    <div class="body3-box7-span2"><span v-text="email1">www1111@qq.com</span></div>
+                    <div class="boxline"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+ 

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="iconfont.css">
+    <link rel="shortcut icon" href="../../../../favicon.ico" />
+    <style type="text/css"></style>
+    <title>书籍简介</title>
+</head>
+<body style="overflow: hidden;">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  
+    <div id="tocenter"> 
+      <div id="blue-line">
+        <div id="title">
+           <div id="main-logo" ><img src="../img/logo.png" alt=""></div>
+            <span id="main-word">云淄</span>
+        </div>
+    <a href="../../../主页.html">  <ul id="min-box">
+      <span id="left-img">&#xe691;</span>
+        <span id="min-word">主页</span>
+    </ul></a>
+      <ul id="min-box-1" onclick="beopen4()">
+        <span id="left-img">&#xe641;</span>
+          <span id="min-word">管理</span>
+          <span id="be-more-4">&#xe637;</span>
+      </ul>
+          <ul id="two-box-4">
+            <a href="../../档案编辑/管理-档案编辑-主页/HTML/主页.html"><li id="two-word">档案编辑</li></a>
+           <a href="../../管理审批/管理-审批-主页/HTML/主页.html"> <li id="two-word">管理审批</li></a>
+            <a href="../../黑名单/管理-黑名单-主页/HTML/主页.html"><li id="two-word">黑名单</li></a>
+      </ul>
+      <ul id="min-box-2" onclick="beopen1()">
+        <span id="left-img">&#xe7a4;</span>
+          <span id="min-word">物品档案</span>
+          <span id="be-more-0">&#xe637;</span>
+      </ul>
+            <ul id="two-box-0">
+              <a href="../../物品档案/物品档案/物品档案.html"><li id="two-word">目录</li></a>
+           <a href="../../物品档案/书籍简介/书籍简介.html"> <li id="two-word">查询</li></a>
+   </ul>
+      <ul id="min-box-3" onclick="beopen()" onfocus="tolook()">
+        <span id="left-img">&#xe6f9;</span>
+          <span id="min-word">物品交流</span>
+          <span id="be-more-1">&#xe637;</span>
+      </ul>
+            <ul id="two-box-1">
+                 <a href="../../物品交流/物品交流-预约/HTML/预约.html"><li id="two-word">预约</li></a>
+                 <a href="../../物品交流/物品交流-借阅/HTML/借阅.html"><li id="two-word">借用</li></a>
+                <a href="../../物品交流/物品交流-归还/HTML/归还.html"> <li id="two-word">归还</li></a>
+            </ul>
+             <!-- 修改部分(将id:be-more改成了be-more-3;min-box的盒子后加了onclick="beopen3()"，也可以直接把这部分粘贴过去替代原有内容) -->
+        <ul id="min-box-4" onclick="beopen3()">
+          <span id="left-img">&#xe613;</span>
+                 <span id="min-word">统计分析</span>
+                 <span id="be-more-3">&#xe637;</span>
+         </ul>
+            <!-- 修改部分 -->
+         <!-- 添加部分 -->
+             <ul id="two-box-3">
+             <a href="../../统计分析/统计分析1/HTML/统计分析1.html"><li id="two-word">统计分析</li></a>
+             <a href="../../统计分析/统计报表/统计报表.html"><li id="two-word">统计报表</li></a>
+             </ul>
+          <!-- 添加部分 -->
+         <ul id="min-box-5" onclick="beopen0()">
+          <span id="left-img">&#xe690;</span>
+                 <span id="min-word">资产维修</span>
+                 <span id="be-more-2">&#xe637;</span>
+         </ul> 
+             <ul id="two-box-2">
+                 <a href="../../资产维修/维修申请/维修申请.html"><li id="two-word">维修申请</li></a>
+                 <a href="../../资产维修/报修处理/报修处理.html"><li id="two-word">报修处理</li></a>
+             </ul>
+                <a href="../../帮助/帮助.html">    <ul id="min-box-6">
+                  <span id="left-img">&#xea02;</span>
+                          <span id="min-word">帮助</span>
+                 </ul></a>
+                 <a href="javascript:history.back(-1)"> </a>
+    </div>
+    </div> 
+
+        <div id="right-0">
+          <div id="right" >
+            <nav id="top-line">
+              <div id="top">
+                <img id="imgs" src="../img/书籍.png" alt="">
+                <span id="titles" ><a href=""> 书籍档案</a></span>
+              </div>
+              <div id="search">
+                <span>搜索 &nbsp;</span>
+                <input id="search-box" type="text" value="例如：书名" onclick="back()" onblur="back0()"> 
+                 <button id="button-box" ><span id="search-button" @click="search">search</span></button>
+              </div>
+            </nav>
+          <div class="middle">
+              <div class="fengmian"> </div>
+               <div class="righ">
+                 <p class="name">
+                {{name}} <span class="span"> /{{author}}</span>
+                </p> 
+             <hr>
+                   <div class="other">数港|其他</div>
+             <div class="price">剩余数量：{{number}}</div>
+             <div class="price" style="position: relative;">编号:{{iD}}</div>
+             
+            </div>
+          </div>
+           <div class="jianjie">
+              <div class="one">
+                <br>
+                <div class="two">书籍简介:</div> <br>
+                <div class="three">&emsp; &emsp; {{introduce}}</div>
+              </div> 
+              <div class="four">
+                <table>
+                    <tr>
+                      <td>出版时间：2011-03</td>
+                      <td>负责人：余苗</td>
+                      <td >价格：￥{{price}}</td>
+                    </tr>
+                    <tr>
+    
+                      <td>入库日期：2021-02-17</td>
+                      <td>所属部门：JAVA二组</td>
+                    </tr>
+                </table>
+              </div>
+              <img id="toback1" onclick="toback()"  src="../img/return.png" alt="">
+           </div>
+        </div>
+        </div>      
+    <script>
+      var app=new Vue({
+        el:"#right-0",
+        data:{
+          bookname:"",
+            name:"",
+            author:"",
+            iD:"",
+            price:"",
+            number:"",
+            introduce:""
+        },
+        methods:{
+             search:function()
+                    {    
+                      document.getElementById("right-1").style.display="none";
+                      document.getElementById("right").style.display="block";
+
+                    
+                      var that=this;
+                       axios.post("http://javahome1.natapp1.cc/Empproject/is",
+                       {bookname:this.bookname+''},
+                      {headers: {'Content-Type':'application/x-www-form-urlencoded'}}).then
+                      (function(response) {
+                        console.log(response.data)
+                          if(response.data!="")
+                          {
+                            response.data.forEach(e => {
+                          that.name=e.name;
+                          that.author=e.author;
+                          that.price=e.price;
+                          that.number=e.number;
+                          that.introduce=e.introduce;
+                          that.iD=e.iD;
+                        });
+                          }
+                          else{
+                            document.getElementById("alter").style.display="block";
+                            document.getElementById("block").style.filter="blur(5px)";
+                          }
+                      },function(err){})
+                    },
+                searchbook:function(book){
+                  this.bookname=book;
+                  this.search();
+                }  
+        }
+      })
+    </script>
+    <div id="alter">
+            <h1 style="position: relative;top:30%;left: 25%;  color: blue; ">没有相关内容哦</span>
+            <button id="min-button" onclick="display()"><p>返 回</p></button>
+    </div>
+    <script>
+      function display(){
+        document.getElementById("alter").style.display="none";
+      }
+      function toback(){
+                
+                  document.getElementById("right").style.display="none";
+                document.getElementById("right-1").style.display="block";
+                }
+    </script>
+
+</body>
+</html>
